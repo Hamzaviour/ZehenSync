@@ -1,0 +1,22 @@
+# deps and builds
+node_modules/
+.next/
+.venv/
+__pycache__/
+*.pyc
+dist/
+# env and secrets
+.env
+.env.*
+!.env.example
+# data
+*.db
+data/
+research/**/data/
+# obsidian per-user state
+docs/.obsidian/workspace*.json
+docs/.obsidian/cache
+# local tooling
+.remember/
+.claude-flow/
+.DS_Store

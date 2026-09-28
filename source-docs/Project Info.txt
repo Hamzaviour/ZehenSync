@@ -1,0 +1,201 @@
+1. Project Info
+
+Timeline:
+
+Start Date: May 2026 (Project Proposal & Approval)
+
+Planned Completion: March 2027 (Final Thesis Defense & System Demo)
+
+Operating System & Tools:
+
+OS: Windows 11 (with WSL2 for Linux environment) / Ubuntu Linux (for GPU servers).
+
+Development Tools: VS Code (IDE), Docker (Containerization), Postman (API Testing), Google Colab (Prototyping).
+
+Frameworks: PyTorch (AI Models), FastAPI (Python Backend), Next.js (React Frontend)., Gen AI Sdks
+
+2. Introduction and Problem
+
+About & Evolution:
+
+NeuroLens AI is a multimodal behavioral phenotyping system. Historically, mental health tools evolved from paper checklists (1960s) to digital surveys (2000s). Recently, AI has entered the field with basic sentiment analysis. NeuroLens represents the next evolution: "Behavioral Medical Imaging," where AI observes physical behavior and reasons like a clinician using Large Language Models (LLMs).
+
+Problem Statement:
+
+Subjectivity: Clinical diagnosis relies heavily on human observation, which varies between practitioners.
+
+Fragmentation: Computer vision tools can track eyes, and Chatbots can talk, but no system combines visual observation with clinical reasoning in a unified workflow.
+
+Manual Process: Psychologists currently have to observe patients, take notes, and write reports manually, leading to high cognitive load and burnout.
+
+Goals:
+
+Primary: To develop a screening support tool that correlates AI-extracted behavioral markers (vision/speech) with expert psychological assessments.
+
+Secondary: To curate "Psyche-Corpus," a specialized dataset for fine-tuning LLMs on clinical psychology.
+
+Scope (Features):
+
+Included: Interactive Chat with Psychology Expert (LLM), Document Analysis (RAG), Video Behavioral Analysis (Blink/Gaze tracking), Speech Pattern Analysis, Automated Report Generation.
+
+Excluded: Autonomous Diagnosis (The system never diagnoses; it only screens), Prescription generation, Real-time medical treatment.
+
+Impact:
+
+Industry: Standardization of mental health screening in diagnostic centers.
+
+Society: Reducing the stigma and barrier to entry for mental health care by providing objective, data-driven insights.
+
+3. AI Features
+
+AI Situations:
+
+Text Understanding (NLP): Using RAG (Retrieval-Augmented Generation) to answer queries based on DSM-5 and research papers.
+
+Computer Vision: Using YOLO v12 for facial region tracking and Transformers for gaze estimation.
+
+Audio Analysis: Using Whisper for speech-to-text and acoustic feature extraction (pauses, tone).
+
+AI vs. Normal System:
+
+A "Normal" system (like a web form) only digitizes user input.
+
+NeuroLens AI generates new data. It can "see" that a patient is blinking less (potential anxiety marker) and "read" a transcript to find cognitive distortions, offering insights that were not explicitly entered by the user.
+
+4. Domain and Stakeholders
+
+Users & Roles:
+
+Clinical Psychologist (Admin/Analyst): Uploads patient videos, reviews AI-generated reports, validates findings.
+
+Psychology Student (User): Uses the "Text Expert" feature to query medical literature and analyze research papers.
+
+System Administrator: Manages the vector database and API keys.
+
+Social/Economic Impact:
+
+Social: Increases trust in mental health diagnosis by adding an objective data layer.
+
+Economic: Reduces the time per patient for documentation, allowing clinics to see more patients.
+
+External Systems:
+
+Hugging Face: For hosting model weights.
+
+OpenAI/Anthropic APIs (Optional): As a fallback if local LLMs are too slow.
+
+Google Cloud/AWS: For GPU compute instances.
+
+5. Competition
+
+Similar Projects:
+
+Hume AI / Affectiva: Focus on "Emotion AI" (Happy/Sad) but lack clinical psychological reasoning.
+
+Woebot: A CBT chatbot, but it cannot "see" the patient or analyze video data.
+
+Differentiation:
+
+Clinical Depth: Unlike general emotion detectors, NeuroLens detects specific biomarkers (e.g., "blunted affect" in Schizophrenia).
+
+Multimodal Fusion: We combine Vision + Audio + Text; most competitors only do one.
+
+Transparency: Our RAG system cites specific pages in medical literature for every claim, avoiding the "Black Box" AI problem.
+
+6. Requirements and Design
+
+User Stories (Format: As a... I want... So that...):
+
+"As a Psychologist, I want to upload a patient interview video, so that I can receive an automated behavioral analysis report."
+
+"As a Student, I want to ask questions to the Psyche-LLM, so that I can get answers cited from the DSM-5."
+
+"As a Researcher, I want to upload a PDF paper, so that the AI can summarize its methodology."
+
+Definition of Done (DoD):
+
+Code is written, tested, and pushed to GitHub.
+
+Unit tests pass (Green build).
+
+Feature is deployed to the Staging environment.
+
+Acceptance criteria met (e.g., "Response time under 5 seconds").
+
+C4 Architecture (Brief):
+
+System: NeuroLens Web Platform.
+
+Containers: Next.js Frontend (Web App) <-> FastAPI Backend (Logic) <-> Vector DB (ChromaDB) & PostgreSQL (User Data).
+
+Components: Logic Tier contains "Vision Engine," "Speech Engine," and "RAG Orchestrator."
+
+Database Entities:
+
+Users (ID, Role, Auth), Sessions (Video Logs, Chat History), Documents (Vector Embeddings of uploaded PDFs), Reports (Generated Insights).
+
+7. Project Planning
+
+Tools:
+
+Jira: For backlog management and Sprint tracking.
+
+Slack/WhatsApp: For daily standups and urgent comms.
+
+GitHub: For source control and CI/CD pipelines.
+
+Sprint 1 Statistics (Text-Expert Module):
+
+Committed Story Points: 40
+
+Actual Completed: 35 (Slight carry-over due to RAG complexity).
+
+Accuracy: Estimated effort was 90% accurate; data cleaning took longer than expected.
+
+Meeting Highlights:
+
+Planning: Decided to prioritize the Text/LLM module before Computer Vision.
+
+Review: Successfully demonstrated the LLM citing sources from the DSM-5.
+
+Retro: Identified that "Dirty PDF data" caused hallucinations; action item is to improve the text cleaning script.
+
+8. Implementation and Monitoring
+
+Deployment:
+
+Frontend: Vercel (Edge Network).
+
+Backend: Dockerized container on a GPU-enabled VM (e.g., RunPod or Google Colab for testing).
+
+Issues: CUDA version mismatches when setting up PyTorch on local machines.
+
+Key Algorithms:
+
+RAG (Retrieval-Augmented Generation): Converts query to vector -> finds nearest neighbor in DB -> feeds context to LLM.
+
+Self-Attention (Transformers): Allows the model to understand long-context clinical histories.
+
+YOLO (CNN): One-stage object detection for fast real-time face tracking.
+
+Traceability:
+
+Requirement (R-101: Analyze PDF) -> Story (US-05) -> GitHub Branch (feat/pdf-parser) -> Test Case (TC-20: Upload valid PDF).
+
+9. Results and Next Steps
+
+Current Status (End of Sprint 2):
+
+Completion: ~30% (Text/RAG Engine is functional; Vision/Speech is in prototype).
+
+Performance: RAG system retrieves correct clinical context with 85% accuracy (Top-3 retrieval).
+
+Chatbot: Fully operational on the web interface.
+
+Future Plans:
+
+Immediate: Integrate the Computer Vision pipeline (Sprint 3).
+
+Medium Term: Implement multimodal fusion (combining Vision+Text).
+
+Long Term: Mobile App development for remote patient monitoring.

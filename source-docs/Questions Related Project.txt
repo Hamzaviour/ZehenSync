@@ -1,0 +1,28 @@
+1. Administrative and Front Matter
+• Project Timeline: What are the exact starting and completion dates for the project?
+• Infrastructure: Which Operating System is being used for development (e.g., Ubuntu, Windows)?
+2. Project Scope and Constraints
+• Exclusions: While the proposal lists functional requirements, what is explicitly out of scope (e.g., medical diagnosis, third-party insurance integration)?
+• Assumptions: What are we assuming will be true for the project to succeed (e.g., "We assume users will have access to a high-definition webcam")?
+• System Constraints: Are there specific limitations or restrictions imposed by the client or the hardware (e.g., "The vision engine must run at 30fps on a standard laptop")?
+3. Domain and Stakeholder Impact
+• Economic/Social Impact: How can we specifically link our objectives to social or economic benefits (e.g., "Automating observation reduces the cost of clinical sessions by X%")?
+• External Dependencies: Does ZehenSync AI depend on any external systems for completion, such as government health portals or specific clinical training databases?
+4. Detailed Requirements Analysis
+• User Stories: For each actor (Psychologist, Student, Researcher), can we define the Product Backlog in the required format: "As a , I want  so that "?
+• Acceptance Criteria: What are the specific conditions of satisfaction for each feature (e.g., "The PDF report must be generated in under 5 seconds")?
+• Story Points: What is the estimated effort (complexity) for each user story based on the Fibonacci scale (1, 2, 3, 5, 8)?
+5. Technical Design and Architecture
+• C4 Diagrams: How can we translate the current "Tech Stack" into formal System Context, Container, and Component diagrams?
+• Database Design: What are the specific entities and relationships for our ER Diagram (ERD) and the detailed Data Dictionary (data types, allowed values)?
+6. Project Planning (Sprint 1)
+• Management Links: What are our specific Jira, Slack, and GitHub repository links and credentials?
+• Sprint Backlog: For Sprint 1, who is assigned to which task, and what is the estimated versus actual effort in hours?
+• Governance: Do we have the minutes from our Sprint Planning, Review, and Retrospective meetings?
+• Design Artifacts: Do we have the Class Diagrams and Sequence Diagrams specifically for the features implemented in Sprint 1?
+7. Implementation and Monitoring
+• Deployment Challenges: Where is the software currently deployed (GCP/Alibaba), and what specific technical hurdles did we overcome during the setup?
+• Unique Algorithms: Beyond using YOLO or Whisper, what are the user-defined or improved algorithms we created (e.g., a specific fusion logic for multimodal data)?
+• Traceability: How will we map our Requirements (PB-ID) to our Prototypes (PID) and Test Cases (TID) in the traceability matrix?
+8. Performance Statistics
+• Metrics: What is the current percentage of completion? What is our system's % accuracy and % correctness based on our testing?

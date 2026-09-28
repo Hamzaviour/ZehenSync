@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256" fill="none">
+  <title>ZehenSync mark, concept B: Trace pin</title>
+  <g stroke="#1A1F26" stroke-linecap="round">
+    <path d="M8 46 H56" stroke-width="4"/>
+    <path d="M16 40 V46 M24 42 V46 M32 42 V46 M48 42 V46" stroke-width="2.5"/>
+    <path d="M40 27 V46" stroke-width="3"/>
+  </g>
+  <circle cx="40" cy="46" r="3.5" fill="#1A1F26"/>
+  <circle cx="40" cy="19" r="9" fill="#2E4A7D"/>
+</svg>
