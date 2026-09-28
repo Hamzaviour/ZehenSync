@@ -24,7 +24,7 @@ The current state of the project on one page. Update it when a decision, blocker
 - Desktop web only. English UI, Roman Urdu understood.
 - Vision in browser (MediaPipe); server YOLO v12 / ViT only for consented research recordings.
 - Markers never flag alone. Scores never come from an LLM.
-- Brand: calm clinical instrument, lapis `#2E4A7D`, IBM Plex + Source Serif, Sync Z mark.
+- Brand v2: light clinical editorial. Zaal mark (Kufic ذ with a saffron nuqta), neel `#26318A`, saffron `#E3A33B` only as the nuqta, Newsreader + Schibsted Grotesk + Geist Mono. Light product, dark brand moments. Live deck: https://claude.ai/artifact/NvFw7sUPwHgv4QoLuQ24TU
 
 ## Divergences from source documents
 

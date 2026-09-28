@@ -214,7 +214,7 @@ Every evidence row shows timestamp, source type, the exact stored value, and for
 
 ### 5.1 Tutor layout
 
-Two columns at 1280 px and above: answer column (max 720 px) and a 380 px reference sidebar. Citations render as small superscript numbers in the lapis accent. Clicking one scrolls the sidebar to the passage and highlights the quoted sentence. A "How I found this" disclosure under each answer shows tiers tried and top scores. Refusals render as a plain notice with suggestions, never as an apology paragraph.
+Two columns at 1280 px and above: answer column (max 720 px) and a 380 px reference sidebar. Citations render as small superscript numbers in neel. Clicking one scrolls the sidebar to the passage and highlights the quoted sentence. A "How I found this" disclosure under each answer shows tiers tried and top scores. Refusals render as a plain notice with suggestions, never as an apology paragraph.
 
 ### 5.2 Simulator
 

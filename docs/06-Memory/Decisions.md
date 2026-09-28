@@ -83,10 +83,17 @@ Architecture decision records. Newest at the bottom. Never delete a record; supe
 
 ## ADR-013
 **Brand: calm clinical instrument, lapis accent, Sync Z mark**
-**Date:** 2026-09-28 · **Status:** accepted
+**Date:** 2026-09-28 · **Status:** superseded by ADR-015
 **Decision:** paper and ink neutrals, lapis `#2E4A7D` accent, IBM Plex + Source Serif, Sync Z mark (three strands fusing at a node). The maroon from the university decks is not part of the brand. See [[Brand-Kit]].
 
 ## ADR-014
 **WeasyPrint for PDF instead of ReportLab**
 **Date:** 2026-09-28 · **Status:** accepted
 **Decision:** render exports from HTML templates so web and PDF share layout and styles.
+
+## ADR-015
+**Brand v2: light clinical editorial, Zaal mark**
+**Date:** 2026-09-28 · **Status:** accepted, supersedes ADR-013
+**Context:** the team rejected v1: the Sync Z mark read as a menu icon, beige paper felt dull, and the kit looked like a document.
+**Decision:** a Kufic ذ (first letter of ذہن) with a saffron diamond nuqta, symmetric about its diagonal with 24° nib cuts. Neel `#26318A` brand colour, saffron `#E3A33B` only as the nuqta, clinical white and cool greys. Newsreader (outlined wordmark), Schibsted Grotesk, Geist Mono. Light product, dark brand moments. Concepts B, C and D are kept in `docs/04-Brand/logo/studies/`.
+**Consequences:** new tokens, icons and logo files; Design System copy updated; the tracker page restyled. See [[Brand-Kit]].

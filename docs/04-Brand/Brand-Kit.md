@@ -1,157 +1,180 @@
 ---
 tags: [brand, identity]
-status: v1
+status: v2
 updated: 2026-09-28
 ---
 
 # Brand Kit
 
-Related: [[Design-System]] · [[Rules#Design and writing]] · tokens in `tokens.css`
+Related: [[Design-System]] · [[Rules#Design and writing]] · tokens in `tokens.css` · live deck: https://claude.ai/artifact/NvFw7sUPwHgv4QoLuQ24TU
 
-## Positioning
+v2 replaces the v1 "Sync Z" identity ([[Decisions#ADR-015]]). Direction: **light clinical editorial**. The product is light and calm; brand moments (decks, posters, social) go dark.
 
-ZehenSync is a calm clinical instrument. It should feel like a well-made piece of medical equipment on a quiet desk: precise, warm, unhurried. It should not feel like a wellness app, a chatbot toy, or a sci-fi AI.
+## The idea
 
-*Zehen* (ذہن) means mind in Urdu. *Sync* is what the product does: it aligns what a person says, what they answer, and how they behave, into one record a psychologist can trust.
+In Urdu one nuqta turns د (dal) into ذ (zaal), the first letter of ذہن, mind. Calligraphers measure every letter in nuqtas. ZehenSync works the same way: every score, flag and citation sits on a point a psychologist can find and check.
 
-Three words: **steady, exact, humane.**
+- **Brand line:** Screening you can trace.
+- **Urdu line:** ذہن کی بات، ثبوت کے ساتھ (matters of the mind, with evidence)
+- **Platform:** Every conclusion has a point of origin.
+- **Character:** steady, exact, humane. A modern clinical journal with a Lahore accent.
+- **Never:** alarm, diagnosis talk, wellness fluff, glowing AI.
 
 ## Logo
 
-### Mark: Sync Z
+### The Zaal mark
 
-![[zehensync-mark.svg|96]]
+![[zehensync-mark.svg|120]]
 
-Three strokes enter from the left (the answers, the voice, the face) and fuse at a single lapis node. From that node one line draws a Z down and across: the traceable record. The node is the product: the point where signals become evidence.
+A Kufic ذ: an upright stem and a base, drawn as one broad-nib stroke, with a saffron diamond nuqta above. It reads three ways: the first letter of ذہن, a corner framing a point of focus (behavioural imaging), and nuqta-e-nazar, a point of view.
+
+### Construction
+
+- The mark mirrors itself across the 45° diagonal (axis y = x in the 64-unit drawing). Stem and base are the same stroke, reflected.
+- Both terminals are cut at 24°, as if one broad pen drew them.
+- Stroke 11 units. Stem 44 units: four strokes tall.
+- Nuqta: a 45° diamond, 13 units across, centred on the axis at (26, 26).
+- Geometry: letter `M43 15 L54 10 L54 51 Q54 54 51 54 L10 54 L15 43 L43 43 Z`, nuqta `M26 19.5 L32.5 26 L26 32.5 L19.5 26 Z`.
+
+### Files
 
 | File | Use |
 |---|---|
-| `logo/zehensync-mark.svg` | Default mark on light backgrounds |
-| `logo/zehensync-mark-reversed.svg` | Mark on dark backgrounds |
-| `logo/zehensync-lockup.svg` | Mark and wordmark, horizontal |
-| `logo/zehensync-lockup-reversed.svg` | Lockup on dark |
+| `logo/zehensync-mark.svg` | Default: neel letter, saffron nuqta |
+| `logo/zehensync-mark-ink.svg` | Ink letter for print on white |
+| `logo/zehensync-mark-reversed.svg` | White letter for neel and night backgrounds |
+| `logo/zehensync-mark-mono.svg` | Single colour (`currentColor`) for stamps, emboss, fax |
+| `logo/zehensync-lockup.svg` | Mark and wordmark, horizontal. Primary. |
+| `logo/zehensync-lockup-reversed.svg` | Horizontal lockup on dark |
+| `logo/zehensync-lockup-stacked.svg` | Mark above wordmark |
 | `logo/zehensync-app-icon.svg` | Favicon, app tile, social avatar |
+| `logo/studies/` | Rejected concepts B (split lens), C (Z-trace), D (two minds), kept for the record |
 
-Other concepts considered, kept for the record: `concept-a-confluence.svg` (three strands into a node; read as a fork or a "less than" sign at small sizes) and `concept-b-trace-pin.svg` (a pin on a timeline; read as a lollipop, so it became the `trace` UI icon).
+The wordmark is **Newsreader Medium at the 72 pt optical size, outlined to vector paths** with the font's own kerning and −0.018 em tracking. The files need no font installed and render the same everywhere. In the horizontal lockup the mark is 1.2× the cap height, sits on the baseline, and leaves a gap of 0.26 em.
 
 ### Rules
 
-- Clear space: the node's diameter on every side.
-- Minimum size: 20 px tall for the mark, 96 px wide for the lockup. Below 20 px use the app icon.
-- The node stays lapis (or light lapis on dark). Never recolour it red, green, or a gradient.
-- Never rotate, add shadows, outline, animate the strokes, or put the mark in a brain, a head silhouette, or a speech bubble.
-- The wordmark is IBM Plex Sans SemiBold, tracking −0.6. **Before print or external use, convert the wordmark text to outlines in Figma**; SVG text falls back to a system font when the file loads as an image.
+- Clear space: half a nuqta around the mark, one nuqta around lockups.
+- Minimum size: mark 16 px, lockup 96 px wide. Below 16 px use the app icon.
+- The nuqta stays saffron in every colour version. Only the mono file makes it one colour.
+- Don't recolour the nuqta, move it (a dot below the letter makes a different letter), rotate, outline, stretch, or add gradients or glow.
+- Don't place the mark inside a brain, a head, or a speech bubble.
 
 ## Colour
 
-A warm paper-and-ink base with one accent. Lapis refers to lapis lazuli from Badakhshan, the blue in Mughal tilework across Lahore. It reads trustworthy without the default-SaaS blue.
+Clinical white and cool greys, deep ink, **neel** as the brand colour, and **saffron** as a single point of attention. Neel is the indigo of Sindh's ajrak cloth. Saffron marks one point per screen, the way the nuqta marks one letter.
+
+Proportion on a typical screen: paper 60%, mist 18%, ink 12%, neel 8%, saffron 2%.
 
 ### Core
 
-| Token | Hex | Role |
-|---|---|---|
-| `paper-50` | `#F7F6F3` | App background, light |
-| `paper-100` | `#EEEDE8` | Sunken surfaces, sidebars |
-| `paper-200` | `#E2E0D9` | Borders, dividers |
-| `stone-300` | `#CBC8BF` | Strong borders, disabled fills |
-| `stone-500` | `#7E776B` | Icons, placeholder. **Not for text** (4.2:1) |
-| `stone-600` | `#5F594F` | Secondary text (6.4:1 on paper-50) |
-| `ink-900` | `#1A1F26` | Primary text, mark strokes (15.3:1) |
-| `lapis-600` | `#2E4A7D` | Accent: primary buttons, links, citations, focus ring (8.1:1) |
-| `lapis-500` | `#3F5F9C` | Accent hover (5.8:1) |
-| `lapis-100` | `#D9E1F0` | Selected rows, user chat block |
-| `lapis-50` | `#EEF2F9` | Subtle accent fill |
-
-### Severity (psychologist and admin areas only)
-
-| Token | Text hex | Fill hex | Meaning |
+| Token | Hex | Role | Contrast on white |
 |---|---|---|---|
-| `sage` | `#40634A` | `#E6EEE7` | Steady, improving, resolved |
-| `ochre` | `#855A12` | `#F5EBD6` | Watch |
-| `clay` | `#9C4A22` | `#F6E4DA` | Urgent |
-| `brick` | `#8E2F2A` | `#F4DEDC` | Crisis |
+| `neel-700` | `#26318A` | Brand, primary actions, links, citations, focus | 11.1:1 |
+| `neel-600` | `#3441A8` | Hover | 8.5:1 |
+| `neel-300` | `#9AA6F2` | Accent on dark, current progress step | on night 8.3:1 |
+| `neel-100` | `#E3E6F7` | Selected, highlight | |
+| `neel-50` | `#F1F2FB` | Subtle fill, user chat block, selected answer | |
+| `ink` | `#0E1233` | Text, wordmark | 18.2:1 |
+| `graphite-700` | `#454A60` | Secondary text | 8.7:1 |
+| `graphite-500` | `#62677D` | Labels, captions | 5.6:1 |
+| `slate` | `#C5C9D6` | Strong borders, disabled | |
+| `line` | `#E3E5EC` | Borders, dividers | |
+| `mist` | `#F4F5F8` | Sunken surfaces, sidebars | |
+| `paper` | `#FFFFFF` | Background | |
+| `saffron-400` | `#E3A33B` | The nuqta. Fills only, never text | 2.2:1 |
+| `saffron-700` | `#8A5A0E` | Text-safe saffron | 5.9:1 |
 
-Every severity pairs colour with a text label and a shape (dot, ring, bar, filled square). Colour never carries meaning alone.
+### Severity (psychologist and admin screens only)
 
-**Patients never see severity colours.** Their results use ink, lapis and paper only. The crisis screen uses the calm palette on purpose: red makes a frightened person more frightened.
+| Token | Text | Fill | Shape |
+|---|---|---|---|
+| `steady` | `#2E6B52` | `#E4F0EA` | ring |
+| `watch` | `#8A5A0E` | `#FBF0DC` | triangle |
+| `urgent` | `#A1461F` | `#F8E6DC` | diamond |
+| `crisis` | `#9A1B35` | `#F7E1E6` | dot |
 
-### Dark theme
+Every state pairs colour with a shape and a word. **Patients never see severity colours**; their results use ink and neel, and the crisis screen stays calm white.
+
+### Dark brand and dark theme
 
 | Token | Hex |
 |---|---|
-| `bg` | `#111418` |
-| `surface` | `#181C22` |
-| `raised` | `#1F242B` |
-| `text` | `#ECE8DF` (15.1:1) |
-| `text-muted` | `#A39C8F` (6.8:1) |
-| `accent` | `#8FA8D6` (7.7:1) |
-| `sage / ochre / clay / brick` text | `#8FB897` / `#D9AE5F` / `#E08A5E` / `#E07A70` |
-
-All ratios measured against the primary background of the theme. Every text pairing passes WCAG AA; body pairings pass AAA.
+| `night` | `#0B0E24` |
+| `night-raised` | `#151A3A` |
+| `night-border` | `#262C57` |
+| `text` | `#EEF0F7` (16.7:1) |
+| `text-muted` | `#A7ACC4` (8.5:1) |
+| `accent` | `#9AA6F2` (8.3:1) |
+| severity text | `#7CC3A0` / `#F0BD62` / `#EE9A74` / `#F28DA2` |
 
 ## Type
 
-| Role | Family | Use |
-|---|---|---|
-| Interface | **IBM Plex Sans** 400, 500, 600 | All UI text, headings |
-| Data | **IBM Plex Mono** 400, 500 | Scores, pseudonyms, timestamps, rule IDs, trace rows |
-| Reading | **Source Serif 4** 400, 600 | Scholar answers, cited passages, patient result explanations |
-| Urdu (post-FYP) | **Noto Nastaliq Urdu** | Urdu script UI |
+| Role | Family | Weights | Use |
+|---|---|---|---|
+| Display and reading | **Newsreader** | 400, 500, 600, italic | Wordmark, headings, patient questions and results, scholar answers, citations |
+| Interface | **Schibsted Grotesk** | 400, 500, 600 | Buttons, labels, navigation, tables, forms |
+| Data | **Geist Mono** | 400, 500 | Scores, pseudonyms, timestamps, rule IDs, trace rows |
+| Urdu (post-FYP) | **Noto Nastaliq Urdu** | 500 | Urdu script UI and brand moments |
 
-Plex comes from IBM's engineering heritage: it reads as instrument lettering. The serif slows reading down where people need to read carefully.
-
-Scale (rem, 16 px base): 0.75 · 0.875 · 1 · 1.125 · 1.25 · 1.5 · 2 · 2.5. Patient body text 1.125 rem minimum. Clinician tables 0.875 rem. Line height 1.55 for reading text, 1.3 for headings, 1.4 for UI. Numbers in tables use `font-variant-numeric: tabular-nums`.
+Scale (px): 13 · 15 · 18 · 24 · 32 · 44 · 64. Patient body text 18. Interface text 15. Clinician tables 14 with tabular figures. Line height 1.6 for reading text, 1.25 for headings, 1.45 for UI.
 
 ## Iconography
 
-- Base set: **Lucide**, 1.5 px stroke, 20 px in UI, 24 px in empty states.
-- Custom set in `icons/`, drawn on the same 24 px grid and stroke: `trace`, `blink`, `gaze`, `speech-pause`, `check-in`, `counselor`, `citation`, `help-now`, `fusion`.
-- Icons sit next to a text label except in dense clinician tables, where a tooltip carries the label.
-- No brains, no lightbulbs, no robots, no sparkles, no hearts-with-heartbeats.
+- Custom set in `icons/`: 24 px grid, 1.75 px stroke, square ends, mitred corners, matching the mark's cut terminals.
+- Icons with a point of focus carry a small nuqta diamond (`trace`, `gaze`, `history`, `citation`, `voice`, `check-in`). In an active state the nuqta turns saffron.
+- Set: `check-in`, `counselor`, `trace`, `flag`, `history`, `share`, `consent`, `blink`, `gaze`, `voice`, `citation`, `help-now` (phone), `alert`.
+- Everything else from Lucide at 1.75 stroke. No brains, lightbulbs, robots or sparkles.
 
-## Imagery
+## Pattern and image
 
-No stock photos of sad people holding their heads. No AI-generated faces. When a screen needs visual weight, use:
-
-- Data drawn from the product itself (a real trace, a real timeline with demo data).
-- Flat paper textures and fine-line diagrams in ink and lapis.
-- Photography of Lahore light and architecture for marketing only, credited.
+- **Nuqta jaali:** a lattice of diamonds (26 px cell, white at 13–16% on neel) with at most two saffron nuqtas. For covers, cards, decks, social, the login backdrop. Never behind patient questions, results or the crisis screen.
+- **Image:** single-ink halftone in neel of Lahore architecture, arcades, jaali screens, horizons. The saffron sun is the only second colour.
+- **Avoid:** stock photos of distress, AI-generated faces, brains and neurons, glowing networks, real patients.
 
 ## Motion
 
-- Durations: 120 ms for hover and press, 200 ms for panels, 320 ms for page transitions.
-- Easing: `cubic-bezier(0.2, 0, 0, 1)` for entering, `cubic-bezier(0.4, 0, 1, 1)` for leaving.
-- One signature motion: when a check-in finishes, the three answer strands on the result card draw into the node (600 ms, once). Nowhere else animates the mark.
-- `prefers-reduced-motion`: all motion becomes opacity fades of 120 ms or less.
-- Nothing pulses, bounces, or loops on patient screens.
+| Moment | Duration | Easing |
+|---|---|---|
+| Check-in complete: the nuqta lands on the mark, once | 560 ms | `cubic-bezier(0.2, 0, 0, 1)` |
+| Hover and press | 120 ms | same |
+| Panels, drawers, reference sidebar | 200 ms | same |
+| Page change | 320 ms | in `0.2, 0, 0, 1`, out `0.4, 0, 1, 1` |
+| Crisis screen | 150 ms | fade only |
+| Reduced motion | ≤ 120 ms | opacity only |
 
 ## Voice and tone
 
-We speak like a thoughtful clinician writing a note to a patient they respect. Short sentences. Plain words. No exclamation marks.
+We write like a thoughtful clinician writing to someone they respect. Short sentences. Plain words. No exclamation marks.
 
-| Context | Do | Don't |
+| Moment | We write | We never write |
 |---|---|---|
 | Result | "Your answers suggest a noticeable level of low mood." | "You have moderate depression." |
 | Encouragement | "Thanks for sticking with it. That was 9 questions." | "Amazing job! You're a superstar!" |
-| Uncertainty | "I can't find evidence for this in my sources." | "Great question! While I can't be certain..." |
+| No evidence | "I can't find evidence for this in my sources." | "Great question! While I can't be certain..." |
 | Invitation | "Would it help to take a short check-in about sleep?" | "Let's dive into your sleep journey!" |
 | Error | "That didn't save. Your answer is still here; try again." | "Oops! Something went wrong." |
 | Crisis | "You don't have to handle this alone." | "We're so worried about you!!" |
+| Psychologist | "PHQ-9 rose from 4.3 to 12 in 9 days." | "Patient appears to be struggling significantly." |
 
-Banned words in product copy: journey, dive in, unlock, empower, seamless, revolutionary, cutting-edge, leverage, supercharge, magic, AI-powered (as a selling point), "we're here for you" (without a concrete action next to it).
-
-Psychologist-facing copy is terse and exact: "PHQ-9 rose from 4.3 to 12 in 9 days." Scholar-facing copy is academic but plain.
+Banned words: journey, dive in, unlock, empower, seamless, revolutionary, cutting-edge, leverage, supercharge, magic, AI-powered (as a selling point), "we're here for you" without a concrete action beside it.
 
 ## Anti-slop checklist
 
-Every screen, deck, or page ships only if all are true:
+A screen, deck or page ships only when every box holds:
 
-- [ ] No purple-to-blue gradients, no glassmorphism, no glowing orbs, no neon.
-- [ ] No three-card "features" row with icons in coloured circles.
-- [ ] No emoji in UI.
-- [ ] No generic hero claim ("Revolutionising mental health with AI").
-- [ ] Every number shown is real or labelled "demo data".
-- [ ] Every illustration explains something specific to ZehenSync.
-- [ ] Typography uses Plex, Plex Mono and Source Serif only.
-- [ ] Accent colour appears on under 10% of the screen.
-- [ ] Copy passes the voice table above.
+- [ ] No gradients, glassmorphism, glowing orbs, or neon.
+- [ ] No row of three feature cards with icons in coloured circles.
+- [ ] No emoji in the interface.
+- [ ] One saffron point per screen, at most.
+- [ ] Every number is real or labelled demo data.
+- [ ] Every image explains something only ZehenSync does.
+- [ ] Newsreader, Schibsted Grotesk and Geist Mono only.
+- [ ] No stock photos of distress. No AI faces. No brains.
+- [ ] The mark appears as drawn: no effects, no rotation.
+- [ ] Copy passes the voice table.
+
+## Notes
+
+- `zehensync.app` in mockups is a placeholder. The domain is not registered.
+- Names in mockups (Hira M., Dr. A. Khan, Sana) are fictional demo data.

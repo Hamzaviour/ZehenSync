@@ -20,7 +20,8 @@ Points use the Fibonacci scale (1, 2, 3, 5, 8). One point is roughly half a day 
 - [ ] T-0.05 Team and advisor review of PRD, App Flow, Rules · — · 2
 - [ ] T-0.06 Monorepo skeleton (apps/web, apps/api, packages/*), README, .editorconfig · — · 2
 - [ ] T-0.07 GitHub repo, branch protection, PR template with RTM checkbox · — · 1
-- [ ] T-0.08 Outline wordmark in Figma, export PNG set and favicon · — · 1
+- [x] T-0.08 Brand v2: Zaal mark, outlined wordmark, tokens, icons, brand deck with laptop mockups · — · 5
+- [ ] T-0.09 Export PNG set and favicon.ico from the v2 SVGs · — · 1
 
 ## P1 · Foundation
 

@@ -29,23 +29,23 @@ Related: [[Brand-Kit]] · [[App-Flow]] · [[Rules#Design and writing]]
 
 ## 3. Components
 
-Built on shadcn/ui and Radix, restyled with [[Brand-Kit]] tokens. Changes from shadcn defaults: warmer neutrals, 8 px radius (not 12), no drop shadows on cards (1 px border instead), focus ring in lapis with 2 px offset.
+Built on shadcn/ui and Radix, restyled with [[Brand-Kit]] tokens. Changes from shadcn defaults: cool clinical neutrals, 6 px radius (not 12), no drop shadows on cards (1 px border instead), focus ring in neel with 2 px offset, Newsreader for headings and questions.
 
 | Component | Notes |
 |---|---|
-| Button | Primary (lapis fill), secondary (border), quiet (text). Height 40 px; 48 px in patient area. One primary per view. |
-| AnswerOption | Patient check-in answer. Full width, 56 px, left-aligned label, keyboard hint on right, selected state lapis-100 fill + 2 px lapis left bar. |
-| QuestionCard | Timeframe line, question (24 px Plex 500), "Show original wording" toggle, answers, note disclosure. |
-| ResultBand | Horizontal segmented bar with band labels beneath; marker for the score. No colour gradient; segments in paper-200 with the active one in lapis. |
+| Button | Primary (neel fill), secondary (border), quiet (text). Height 40 px; 48 px in patient area. One primary per view. |
+| AnswerOption | Patient check-in answer. Full width, 56 px, left-aligned label, keyboard hint on right, selected state neel-50 fill, neel border and a 3 px neel left bar. |
+| QuestionCard | Timeframe line, question (28 px Newsreader 400), "Show original wording" toggle, answers, note disclosure. |
+| ResultBand | Horizontal segmented bar with band labels beneath; marker for the score. No colour gradient; segments in line grey with the active one in neel; the score marker is the saffron nuqta. |
 | SeverityTag | Clinician only. Shape + colour + label: `● Crisis`, `◆ Urgent`, `▲ Watch`, `○ Info`. |
 | DeltaChip | `↑ 7.7 vs baseline` in mono; clay text if ≥ 5 up, sage if ≥ 5 down, stone otherwise. |
 | TraceRow | Timestamp (mono), source icon, summary, stored value, expand chevron. Expanded shows canonical vs displayed text side by side. |
-| CitationMark | Superscript `[n]` in lapis, 44 px hit area, hover shows source title and page. |
+| CitationMark | Superscript `[n]` in Geist Mono, neel, 44 px hit area, hover shows source title and page. |
 | ReferencePanel | Sticky sidebar listing sources; active one highlighted; quote in serif with the cited sentence underlined. |
-| ChatMessage | Assistant: plain text on page, no bubble. User: lapis-50 block, right aligned, max 80%. Guard-replaced lines show a small "adjusted for safety" note to clinicians only. |
+| ChatMessage | Assistant: plain text on page, no bubble. User: neel-50 block, right aligned, max 80%. Guard-replaced lines show a small "adjusted for safety" note to clinicians only. |
 | CaptureIndicator | Small dot + label "Camera on" / "Mic on" in the context strip; click pauses capture. |
 | ResourcesStrip | Persistent top strip after a safety pathway: helpline numbers inline, "Get help now" link. Paper-100 background, ink text. |
-| CrisisScreen | Full viewport, paper background, ink text, lapis `tel:` buttons 56 px tall. |
+| CrisisScreen | Full viewport, paper background, ink text, neel `tel:` buttons 56 px tall. No saffron, no severity colours. |
 | DataTable | TanStack Table, sticky header, 44 px rows, tabular numbers, column sort, keyboard row navigation. |
 | Timeline | visx line chart, band backgrounds as faint horizontal stripes, points clickable to sessions. |
 | MarkerPanel | Small multiples per marker with quality shading; unusable windows hatched and excluded. |
@@ -84,7 +84,7 @@ See wireframe in [[App-Flow#4.2 Flag trace (the core screen)]]. This screen is t
 ### 4.6 Scholar tutor
 
 - Question input at top of thread when empty, at bottom once a thread exists.
-- Answer in Source Serif 4, 18 px, 1.6 line height.
+- Answer in Newsreader, 18 px, 1.6 line height.
 - "How I found this" disclosure beneath each answer.
 - Level switch in the header (Intro, Intermediate, Advanced, Research) to override the profile for one answer.
 
