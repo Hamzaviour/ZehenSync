@@ -17,7 +17,8 @@ Hard rules (full list in Rules.md):
 
 Workflow:
 
-- Pick a task from `docs/05-Planning/Tracker.md`; branch `feat/T-x.yy-short-name`.
+- Work on the current phase branch (`phase/pN-name`); one commit per tracker task, message starting with the task ID. Merge to `main` and tag only after the phase exit check passes.
+- Commits are authored by Hamza Younas <hamzavelous@gmail.com> only. Never add `Co-Authored-By` or any AI attribution.
 - Tests first for scoring, safety, permissions and trace logic.
 - Update Tracker.md, RTM.md and Memory.md in the same change when status, requirements or decisions move.
 - Record new architecture decisions in `docs/06-Memory/Decisions.md`.

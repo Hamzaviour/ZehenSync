@@ -40,7 +40,8 @@ These rules bind every contributor, human or AI. A pull request that breaks one 
 5. Tests first for scoring, safety, permissions and trace logic.
 6. The safety eval and scoring tests block merge on failure.
 7. Migrations only through Alembic. No manual schema edits on staging or prod.
-8. One feature branch per tracker task: `feat/T-2.04-phq9-runner`. Commits reference the task ID.
+8. One branch per phase (`phase/p1-foundation`, `phase/p2-screening`, ...), one commit per tracker task on it; commit messages start with the task ID (`T-1.05 auth: ...`). A phase merges into `main` only after its exit check passes, then gets a tag (`v0.2.0` for P1).
+13. Every commit is authored and committed by Hamza Younas <hamzavelous@gmail.com>. No AI co-author trailers or attribution lines in commits, PRs or code.
 9. Every pull request updates [[Tracker]] and, when a requirement changes, [[RTM]].
 10. Keep files under roughly 400 lines. A larger file means the module needs splitting.
 11. Pin dependency versions. Run `pip-audit` and `pnpm audit` before each release.
