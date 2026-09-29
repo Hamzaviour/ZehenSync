@@ -1,0 +1,16 @@
+---
+source_file: "CLAUDE.md"
+type: "rationale"
+community: "AI Assistant Rules and Repo Layout"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/AI_Assistant_Rules_and_Repo_Layout
+---
+
+# Rule: No Real Patient Data in Dev, Tests, or Prompts
+
+## Connections
+- [[CLAUDE.md AI Assistant Instructions]] - `references` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/AI_Assistant_Rules_and_Repo_Layout

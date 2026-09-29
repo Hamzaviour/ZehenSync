@@ -42,6 +42,7 @@ The product screens. It does not diagnose, prescribe, or treat.
 
 - Build tracker (shared status): https://claude.ai/artifact/HQtuNNJS27Q1DwxLvzSdVs
 - Brand kit: https://claude.ai/artifact/NvFw7sUPwHgv4QoLuQ24TU
+- Landing page with film: https://claude.ai/artifact/FKkR6Lh89Z1uMQCEK615eR (code in `apps/landing/`, spec [[Landing-Page]])
 
 Both are private until shared from each page's Share menu.
 

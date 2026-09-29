@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ZehenSync AI · Screening you can trace</title>
+<meta name="description" content="ZehenSync AI guides people through validated mental-health check-ins, reads behavioural signals from an ordinary webcam, and shows psychologists the exact answer behind every flag.">
+<meta name="theme-color" content="#0B0E24">
+<meta property="og:title" content="ZehenSync AI · Screening you can trace">
+<meta property="og:description" content="Mental-health screening support for Pakistan. Every flag has a source.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Noto+Nastaliq+Urdu:wght@500&family=Schibsted+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-check-in" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M5.5 4.5 H18.5 V21 H5.5 Z"/><path d="M9.5 4.5 V2.8 H14.5 V4.5"/><path d="M11.5 10 H16"/><path d="M11.5 15.5 H16"/><path class="nq" d="M8.6 8.4 L10.2 10 L8.6 11.6 L7.0 10 Z" style="fill:var(--nq,currentColor);stroke:none"/><path class="nq" d="M8.6 13.9 L10.2 15.5 L8.6 17.1 L7.0 15.5 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-counselor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 5 H20 V16 H11.5 L7.5 19.5 V16 H4 Z"/><path d="M8 10.5 H16"/></g></symbol>
+<symbol id="i-trace" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M3.5 19 H20.5"/><path d="M6.5 17 V19 M10 17.8 V19 M17.5 17.8 V19"/><path d="M14 10.5 V19"/><path class="nq" d="M14 3.5999999999999996 L17.2 6.8 L14 10.0 L10.8 6.8 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 21 V3.5"/><path d="M6 4.5 H17.5 L14.8 8.5 L17.5 12.5 H6"/></g></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 19.5 H20"/><path d="M5 15.5 L9.5 11.5 L13.5 13.5 L17.5 8.5"/><path class="nq" d="M18.6 5.0 L20.8 7.2 L18.6 9.4 L16.400000000000002 7.2 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M13.5 4 H20 V10.5"/><path d="M20 4 L11 13"/><path d="M17.5 14 V20 H4 V6.5 H10"/></g></symbol>
+<symbol id="i-consent" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 3 L19 5.8 V11.5 C19 15.8 16 18.8 12 20.8 C8 18.8 5 15.8 5 11.5 V5.8 Z"/><path d="M8.8 11.8 L11 14 L15.4 9.6"/></g></symbol>
+<symbol id="i-blink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M3 11 C6 14.5 9 15.8 12 15.8 C15 15.8 18 14.5 21 11"/><path d="M6.8 14.6 L5.6 16.8 M12 15.8 V18.4 M17.2 14.6 L18.4 16.8"/></g></symbol>
+<symbol id="i-gaze" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M2.5 12 C5.5 7.2 8.6 5.5 12 5.5 C15.4 5.5 18.5 7.2 21.5 12 C18.5 16.8 15.4 18.5 12 18.5 C8.6 18.5 5.5 16.8 2.5 12 Z"/><path class="nq" d="M13.6 8.4 L16.2 11 L13.6 13.6 L11.0 11 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-voice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 10.5 V13.5 M7.5 7.5 V16.5 M11 9.5 V14.5"/><path d="M17 5.5 V18.5 M20.5 9.5 V14.5"/><path class="nq" d="M14 10.7 L15.3 12 L14 13.3 L12.7 12 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-citation" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M3.5 5.5 H9.5 C10.9 5.5 12 6.6 12 8 V20 C12 18.9 11.1 18 10 18 H3.5 Z"/><path d="M20.5 5.5 H14.5 C13.1 5.5 12 6.6 12 8"/><path d="M20.5 9.5 V18 H14 C12.9 18 12 18.9 12 20"/><path class="nq" d="M19.2 2.2 L21.2 4.2 L19.2 6.2 L17.2 4.2 Z" style="fill:var(--nq,currentColor);stroke:none"/></g></symbol>
+<symbol id="i-help-now" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M6.5 3.5 H9.5 L11 8 L8.8 9.5 C9.8 11.7 12.3 14.2 14.5 15.2 L16 13 L20.5 14.5 V17.5 C20.5 19.2 19.2 20.5 17.5 20.5 C10.3 20.5 3.5 13.7 3.5 6.5 C3.5 4.8 4.8 3.5 6.5 3.5 Z"/></g></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M6 17 V11 C6 7.7 8.7 5 12 5 C15.3 5 18 7.7 18 11 V17"/><path d="M4.5 17 H19.5"/><path d="M10.5 20 H13.5"/></g></symbol>
+<pattern id="jaali" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M17 0 L34 17 L17 34 L0 17 Z" fill="none" stroke="#2A3272" stroke-width="1"/><path d="M17 13 L21 17 L17 21 L13 17 Z" fill="#232A66"/></pattern>
+<pattern id="jaali-light" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M17 0 L34 17 L17 34 L0 17 Z" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1"/><path d="M17 13 L21 17 L17 21 L13 17 Z" fill="rgba(255,255,255,.16)"/></pattern>
+</defs></svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" aria-label="ZehenSync home"><img class="lk" src="assets/logo/zehensync-lockup-reversed.svg" alt="ZehenSync"></a>
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#signals">Signals</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#audiences">Who it's for</a></li>
+      <li><a href="#research">Research</a></li>
+    </ul>
+    <div class="r"><a class="btn-g" href="#film">Watch the film</a><a class="btn-w sm" href="#pilot">Request a pilot</a></div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="jaali-bg" data-parallax="0.25"><svg aria-hidden="true"><rect width="100%" height="100%" fill="url(#jaali)"/></svg></div>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow" data-hero="eyebrow"><i></i>Mental-health screening support · Lahore</span>
+        <h1 id="hero-title">
+          <span class="ln"><span>Screening</span></span>
+          <span class="ln"><span>you can <span style="white-space:nowrap"><em>trace</em><span class="nq-stop" id="heroNq"></span></span></span></span>
+        </h1>
+        <p class="lede" data-hero="fade">ZehenSync guides a person through validated check-ins one question at a time, reads blink, gaze and pauses from an ordinary webcam, and shows the psychologist the exact answer behind every flag.</p>
+        <div class="ctas" data-hero="fade">
+          <a class="btn-w" href="#pilot">Request a pilot</a>
+          <a class="btn-g" href="#film"><span class="pl"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5 L10.5 6 L3 10.5 Z" fill="#fff"/></svg></span>Watch the film <small>0:55</small></a>
+        </div>
+        <ul class="facts" data-hero="fade">
+          <li><b data-count="1">1</b>source behind every flag, down to the second</li>
+          <li><b data-count="0">0</b>webcam frames leave the browser</li>
+          <li><b data-count="100" data-suffix="%">100%</b>of scores computed by code, never by AI</li>
+        </ul>
+      </div>
+      <div class="hero-visual" data-hero="visual">
+        <div class="tilt" id="heroTilt">
+          <div class="laptop"><div class="lid"><div class="screen"><div class="scene"><div class="scr">
+          <aside class="sb">
+            <img class="lkx" src="assets/logo/zehensync-lockup.svg" alt="">
+            <span class="nv"><svg><use href="#i-history"/></svg>Home</span>
+            <span class="nv on"><svg><use href="#i-check-in"/></svg>Check in</span>
+            <span class="nv"><svg><use href="#i-counselor"/></svg>Talk</span>
+            <span class="nv"><svg><use href="#i-trace"/></svg>My history</span>
+            <span class="nv"><svg><use href="#i-share"/></svg>Sharing</span>
+            <span class="nv"><svg><use href="#i-consent"/></svg>Privacy</span>
+            <div class="who"><span class="av">S</span>Sana</div>
+          </aside>
+          <div class="mn">
+            <div class="tb"><span style="color:var(--g5);font-size:.95em">Check-in · <b style="color:var(--ink);font-weight:500">PHQ-9</b></span>
+              <div class="r"><span class="demo">Demo data</span><span class="pill"><svg><use href="#i-help-now"/></svg>Get help now</span></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:1em;width:100%;max-width:40em;margin:0 auto;padding:2.2em 1.6em 1em">
+              <div class="prog"><i class="d"></i><i class="c"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="row"><span class="tf" style="font-size:.85em">Over the last 2 weeks</span><span class="tf" style="font-size:.85em">Question 2 of 9</span></div>
+              <p class="q" style="font-size:2.15em">How often have you felt low, down, or without hope?</p>
+              <span class="lnk" style="font-size:.9em">Show original wording</span>
+              <div style="display:flex;flex-direction:column;gap:.55em;margin-top:.3em">
+                <div class="ans"><span>Not at all</span><span class="key">1</span></div>
+                <div class="ans sel"><span>Several days</span><span class="key">2</span></div>
+                <div class="ans"><span>More than half the days</span><span class="key">3</span></div>
+                <div class="ans"><span>Nearly every day</span><span class="key">4</span></div>
+              </div>
+              <span style="font-size:.9em;color:var(--g7)">+ Add a note</span>
+              <div class="row" style="margin-top:auto"><span class="btn">Back</span>
+                <span class="tf" style="display:inline-flex;align-items:center;gap:.5em;font-size:.85em"><svg viewBox="0 0 8 8" style="width:.7em;height:.7em"><path d="M4 0 L8 4 L4 8 L0 4 Z" fill="#E3A33B"/></svg>Camera on · <span class="lnk" style="font-size:1em">Pause</span></span></div>
+            </div>
+            <div class="disc">ZehenSync is a screening tool. It cannot diagnose. In an emergency call 1122.</div>
+          </div>
+        </div></div></div></div><div class="base"></div><div class="floor"></div></div>
+        </div>
+        <span class="chip-float" data-hero="chip"><i></i>Hard Stop armed · 3 detectors</span>
+        <div class="callout" data-hero="callout">
+          <div class="row"><span class="sev s-urgent"><b></b>Urgent</span><span class="chip">ZS-7F3K-2Q</span></div>
+          <p class="t">PHQ-9 rose from 4.3 to 12 in 9 days</p>
+          <div class="src"><span>Source</span><span>Item 2 · "More than half the days"</span><span>Shown as</span><span>How often have you felt low, down, or without hope?</span><span>At</span><span class="mono" style="font-size:12px">20 Nov 2026 · 14:05</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- problem -->
+  <section class="sec problem" aria-labelledby="problem-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>The problem</span>
+        <h2 class="h2" id="problem-title">Distress rarely <em>announces</em> itself.</h2>
+      </div>
+      <div class="grid">
+        <div data-reveal>
+          <p class="stat-big"><span data-count="40">40</span><sup>%+</sup></p>
+          <p class="stat-cap">of depression and anxiety cases are missed in routine primary-care visits, because screening waits for the patient to bring it up.</p>
+          <p class="src-note">Source · American Medical Association, 2023</p>
+        </div>
+        <div class="versus" data-reveal>
+          <div class="vs-card">
+            <span class="lbl">A generic chatbot waits</span>
+            <div class="empty-box">How are you feeling today?&nbsp;<span class="caret"></span></div>
+            <p style="font-size:14.5px;color:var(--muted)">A person in distress rarely types their symptoms into an empty box. What they do write can't be scored or verified.</p>
+          </div>
+          <div class="vs-card good">
+            <span class="lbl">ZehenSync leads, one question at a time</span>
+            <p class="q">How often have you had trouble falling or staying asleep?</p>
+            <div class="opts"><span class="ans">Not at all</span><span class="ans sel">Several days</span><span class="ans">More than half the days</span><span class="ans">Nearly every day</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- story -->
+  <section class="story" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>How it works</span>
+        <h2 class="h2" id="how-title">One point of origin, <em>three</em> people who need it.</h2>
+        <p class="lede">In Urdu, one nuqta turns د into ذ, the first letter of ذہن, mind. ZehenSync treats evidence the same way: every conclusion sits on a point you can find.</p>
+      </div>
+      <div class="story-grid">
+        <div class="steps" id="steps">
+          <div class="rail"><div class="rail-fill" id="railFill"></div><div class="rail-nq" id="railNq"></div></div>
+          <article class="step on" data-step="0">
+            <span class="k">01 · For the person seeking support</span>
+            <h3>One question. Fixed answers. Plain words.</h3>
+            <p>The AI rewrites a validated questionnaire item so it reads naturally. The person taps an answer. The score is arithmetic in code, and the original wording is always one tap away.</p>
+            <ul><li>PHQ-9, GAD-7, WHO-5 and the C-SSRS screener</li><li>Self-harm items are never reworded</li><li>A counselor chat that listens without diagnosing</li></ul>
+          </article>
+          <article class="step" data-step="1">
+            <span class="k">02 · For the psychologist</span>
+            <h3>Every flag has a source.</h3>
+            <p>When a score jumps, the psychologist sees the rule that fired, the baseline, the exact answer and the words the patient actually saw, to the second. Then they decide.</p>
+            <ul><li>Triage queue sorted by urgency and change</li><li>PDF and JSON exports with a content hash</li><li>Access only with the patient's consent, revocable any time</li></ul>
+          </article>
+          <article class="step" data-step="2">
+            <span class="k">03 · For the psychology student</span>
+            <h3>No source, no answer.</h3>
+            <p>Answers are grounded in the DSM-5-TR and peer-reviewed papers, with the passage one click away. When the evidence isn't there, the tutor says so instead of guessing.</p>
+            <ul><li>Adapts depth from first year to research level</li><li>Interview practice on synthetic patients</li><li>Never touches real patient data</li></ul>
+          </article>
+        </div>
+        <div class="stage">
+          <div class="laptop"><div class="lid"><div class="screen" id="storyScreen">
+            <div class="scene" data-scene="0"><div class="scr">
+          <aside class="sb">
+            <img class="lkx" src="assets/logo/zehensync-lockup.svg" alt="">
+            <span class="nv"><svg><use href="#i-history"/></svg>Home</span>
+            <span class="nv on"><svg><use href="#i-check-in"/></svg>Check in</span>
+            <span class="nv"><svg><use href="#i-counselor"/></svg>Talk</span>
+            <span class="nv"><svg><use href="#i-trace"/></svg>My history</span>
+            <span class="nv"><svg><use href="#i-share"/></svg>Sharing</span>
+            <span class="nv"><svg><use href="#i-consent"/></svg>Privacy</span>
+            <div class="who"><span class="av">S</span>Sana</div>
+          </aside>
+          <div class="mn">
+            <div class="tb"><span style="color:var(--g5);font-size:.95em">Check-in · <b style="color:var(--ink);font-weight:500">PHQ-9</b></span>
+              <div class="r"><span class="demo">Demo data</span><span class="pill"><svg><use href="#i-help-now"/></svg>Get help now</span></div></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:1em;width:100%;max-width:40em;margin:0 auto;padding:2.2em 1.6em 1em">
+              <div class="prog"><i class="d"></i><i class="c"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="row"><span class="tf" style="font-size:.85em">Over the last 2 weeks</span><span class="tf" style="font-size:.85em">Question 2 of 9</span></div>
+              <p class="q" style="font-size:2.15em">How often have you felt low, down, or without hope?</p>
+              <span class="lnk" style="font-size:.9em">Show original wording</span>
+              <div style="display:flex;flex-direction:column;gap:.55em;margin-top:.3em">
+                <div class="ans"><span>Not at all</span><span class="key">1</span></div>
+                <div class="ans sel"><span>Several days</span><span class="key">2</span></div>
+                <div class="ans"><span>More than half the days</span><span class="key">3</span></div>
+                <div class="ans"><span>Nearly every day</span><span class="key">4</span></div>
+              </div>
+              <span style="font-size:.9em;color:var(--g7)">+ Add a note</span>
+              <div class="row" style="margin-top:auto"><span class="btn">Back</span>
+                <span class="tf" style="display:inline-flex;align-items:center;gap:.5em;font-size:.85em"><svg viewBox="0 0 8 8" style="width:.7em;height:.7em"><path d="M4 0 L8 4 L4 8 L0 4 Z" fill="#E3A33B"/></svg>Camera on · <span class="lnk" style="font-size:1em">Pause</span></span></div>
+            </div>
+            <div class="disc">ZehenSync is a screening tool. It cannot diagnose. In an emergency call 1122.</div>
+          </div>
+        </div></div>
+            <div class="scene" data-scene="1"><div class="scr">
+          <aside class="sb">
+            <img class="lkx" src="assets/logo/zehensync-lockup.svg" alt="">
+            <span class="nv on"><svg><use href="#i-flag"/></svg>Queue</span>
+            <span class="nv"><svg><use href="#i-history"/></svg>Patients</span>
+            <span class="nv"><svg><use href="#i-alert"/></svg>Alerts<span class="badge">2</span></span>
+            <span class="nv"><svg><use href="#i-share"/></svg>Exports</span>
+            <span class="nv"><svg><use href="#i-citation"/></svg>Assistant</span>
+            <span class="nv"><svg><use href="#i-consent"/></svg>Settings</span>
+            <div class="who"><span class="av">AK</span>Dr. A. Khan</div>
+          </aside>
+          <div class="mn">
+            <div class="tb"><span class="t">Triage queue</span>
+              <div class="r"><span class="seg2"><span class="on">All 6</span><span>Crisis 1</span><span>Urgent 2</span><span>Watch 2</span></span><span class="demo">Demo data</span></div></div>
+            <div style="flex:1;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.25fr);min-height:0">
+              <div style="border-right:1px solid var(--line);min-width:0;overflow:hidden;display:flex;flex-direction:column">
+                <div class="qrow qhead"><span></span><span>Patient</span><span>Latest</span><span>Change</span><span>Last</span></div>
+                <div class="qrow"><span class="sev s-crisis" style="padding:.3em;background:none" title="Crisis"><b style="background:var(--crisis);border-radius:50%"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-size:.88em">ZS-2K9D-7M</span><span class="mono">C-SSRS positive</span><span class="mono">·</span><span class="mono" style="color:var(--g5)">12m</span></div><div class="qrow on"><span class="sev s-urgent" style="padding:.3em;background:none" title="Urgent"><b style="background:var(--urgent);transform:rotate(45deg)"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-weight:500">Hira M.</span><span class="mono">PHQ-9 12</span><span class="up">↑ 7.7</span><span class="mono" style="color:var(--g5)">2h</span></div><div class="qrow"><span class="sev s-urgent" style="padding:.3em;background:none" title="Urgent"><b style="background:var(--urgent);transform:rotate(45deg)"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-size:.88em">ZS-8Q1A-4F</span><span class="mono">GAD-7 16</span><span class="up">↑ 6.0</span><span class="mono" style="color:var(--g5)">5h</span></div><div class="qrow"><span class="sev s-watch" style="padding:.3em;background:none" title="Watch"><b style="width:0;height:0;border-left:.35em solid transparent;border-right:.35em solid transparent;border-bottom:.65em solid var(--watch)"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-weight:500">Bilal A.</span><span class="mono">ISI 17</span><span class="up">↑ 3.0</span><span class="mono" style="color:var(--g5)">1d</span></div><div class="qrow"><span class="sev s-watch" style="padding:.3em;background:none" title="Watch"><b style="width:0;height:0;border-left:.35em solid transparent;border-right:.35em solid transparent;border-bottom:.65em solid var(--watch)"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-size:.88em">ZS-3C7T-9P</span><span class="mono">PHQ-9 9</span><span class="up">↑ 2.3</span><span class="mono" style="color:var(--g5)">2d</span></div><div class="qrow"><span class="sev s-steady" style="padding:.3em;background:none" title="Steady"><b style="border:1.5px solid var(--steady);border-radius:50%"></b></span><span style="overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-size:.88em">ZS-5M2R-1H</span><span class="mono">WHO-5 64%</span><span class="mono">0</span><span class="mono" style="color:var(--g5)">3d</span></div>
+                <div style="margin-top:auto;padding:1em 1.1em;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:.85em;color:var(--g7)"><span>Your invite code <span class="mono" style="color:var(--ink);font-weight:500">K7Q-4MD</span></span><span class="lnk">Copy</span></div>
+              </div>
+              <div style="padding:1.2em 1.4em;display:flex;flex-direction:column;gap:.8em;min-width:0;overflow:hidden">
+                <div class="row"><span class="sev s-urgent"><b></b>Urgent</span><span class="chip">ZS-7F3K-2Q</span></div>
+                <div class="row" style="align-items:flex-end">
+                  <div><p style="font:500 1.45em/1.2 var(--serif)">Rapid increase in depression score</p>
+                  <p style="font-size:.85em;color:var(--g5)">Hira M. · linked since 03 Nov · rule <span class="mono">PHQ9.delta.gte5 v1.0</span></p></div>
+                  <svg viewBox="0 0 100 44" style="width:9em;height:auto;flex:none" aria-hidden="true"><rect x="0" y="29.6" width="100" height="6" fill="#F1F2FB"/><path d="M0 32.6 H100" stroke="#9AA6F2" stroke-width=".8" stroke-dasharray="2 2"/><polyline fill="none" stroke="#26318A" stroke-width="1.6" points="4,31.8 34,33.0 64,33.0 94,23.0"/><circle cx="4" cy="31.8" r="2" fill="#26318A"/><circle cx="34" cy="33.0" r="2" fill="#26318A"/><circle cx="64" cy="33.0" r="2" fill="#26318A"/><path d="M94 19.8 L97.2 23.0 L94 26.2 L90.8 23.0 Z" fill="#E3A33B"/><text x="0" y="43" font-family="Geist Mono, monospace" font-size="6" fill="#62677D">baseline 4.3</text></svg>
+                </div>
+                <div style="background:var(--neel05);border-radius:.45em;padding:.6em .8em;font-size:.92em"><b style="font-weight:600">Why this flag exists.</b> PHQ-9 rose from a baseline of 4.3 (3 sessions) to 12 within 9 days.</div>
+                <div style="border:1px solid var(--line);border-radius:.5em;overflow:hidden">
+                  <div class="ev"><svg><use href="#i-trace"/></svg><span class="mono">20 Nov 14:05</span><span>PHQ-9 session · total <b>12</b> · moderate</span><span class="lnk" style="font-size:.9em">Open</span>
+                    <div class="sub2"><span>Item 2</span><span>Feeling down, depressed, or hopeless</span><span>Shown as</span><span>How often have you felt low, down, or without hope?</span><span>Answer</span><span>More than half the days · 2</span></div></div>
+                  <div class="ev"><svg><use href="#i-trace"/></svg><span class="mono">11 Nov 10:12</span><span>PHQ-9 session · total 4 · baseline</span><span class="lnk" style="font-size:.9em">Open</span></div>
+                  <div class="ev"><svg><use href="#i-counselor"/></svg><span class="mono">19 Nov 22:14</span><span>Chat · “i haven't slept properly in days”</span><span class="lnk" style="font-size:.9em">Open</span></div>
+                  <div class="ev"><svg><use href="#i-consent"/></svg><span class="mono">Intake</span><span>Context · financial strain, night-shift work</span><span></span></div>
+                </div>
+                <div style="display:flex;gap:.5em;margin-top:auto"><span class="btn pri">Acknowledge</span><span class="btn">Resolve</span><span class="btn">Add note</span><span class="btn" style="margin-left:auto">Export evidence</span></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+            <div class="scene" data-scene="2"><div class="scr">
+          <aside class="sb">
+            <img class="lkx" src="assets/logo/zehensync-lockup.svg" alt="">
+            <span class="nv on"><svg><use href="#i-citation"/></svg>Ask</span>
+            <span class="nv"><svg><use href="#i-check-in"/></svg>Sources</span>
+            <span class="nv"><svg><use href="#i-counselor"/></svg>Simulator</span>
+            <span class="nv"><svg><use href="#i-history"/></svg>My progress</span>
+            <span class="sub">Recent</span>
+            <span class="th on">MDD: diagnostic criteria</span>
+            <span class="th">Bipolar I or bipolar II</span>
+            <span class="th">CBT-I for insomnia</span>
+            <span class="th">Cluster B overview</span>
+            <div class="who"><span class="av">RZ</span>Raza · 3rd year</div>
+          </aside>
+          <div class="mn">
+            <div class="tb"><span class="t">Major depressive disorder: criteria</span>
+              <div class="r"><span class="seg2"><span>Intro</span><span class="on">Intermediate</span><span>Advanced</span><span>Research</span></span><span class="demo">Demo data</span></div></div>
+            <div style="flex:1;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);min-height:0">
+              <div style="padding:1.4em 1.8em 1em;display:flex;flex-direction:column;gap:1em;min-width:0;border-right:1px solid var(--line)">
+                <div class="bub">What is required for a diagnosis of major depressive disorder?</div>
+                <p style="font:400 1.22em/1.62 var(--serif)">Five or more symptoms must be present during the same two-week period, and at least one of them must be depressed mood or a loss of interest or pleasure.<sup class="cite">[1]</sup> The symptoms must cause clinically significant distress or impairment, and must not be better explained by a substance or another medical condition.<sup class="cite">[2]</sup></p>
+                <p style="font:400 1.22em/1.62 var(--serif)">For scale, a US national survey estimated lifetime prevalence at about 16%.<sup class="cite">[3]</sup></p>
+                <span style="font:.8em var(--mono);color:var(--g5)">How I found this · Tier 1 DSM-5-TR (2 passages) · Tier 2 PubMed (1) · all claims verified</span>
+                <div class="cmp" style="margin-top:auto"><span style="flex:1">Ask about a disorder, criterion or study</span><span class="btn pri">Ask</span></div>
+              </div>
+              <div style="background:var(--mist);padding:1.2em;display:flex;flex-direction:column;gap:.7em;min-width:0;overflow:hidden">
+                <span style="font:500 .72em var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--g5)">References</span>
+                <div class="refc on"><span class="src">[1] DSM-5-TR · Depressive Disorders · p. 183</span>
+                  <p><mark style="background:var(--neel1);color:var(--ink);padding:0 .1em">Five (or more) of the following symptoms have been present during the same 2-week period</mark> and represent a change from previous functioning.</p></div>
+                <div class="refc"><span class="src">[2] DSM-5-TR · Depressive Disorders · p. 184</span></div>
+                <div class="refc"><span class="src">[3] Kessler et al. 2003 · JAMA · PubMed</span><p style="font-size:.88em;color:var(--g7)">The epidemiology of major depressive disorder: results from the National Comorbidity Survey Replication.</p></div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+          </div></div><div class="base"></div><div class="floor"></div></div>
+          <div class="stage-cap"><span id="stageLabel"><b>Patient</b> · guided check-in</span><span id="stageNum">01 / 03</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- signals -->
+  <section class="sec signals" id="signals" aria-labelledby="signals-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>Behavioural medical imaging</span>
+        <h2 class="h2" id="signals-title">An ordinary webcam, read <em>like a scan.</em></h2>
+      </div>
+      <div class="grid">
+        <div data-reveal>
+          <p class="lede">While a person answers, ZehenSync measures how they answer: blink rate, gaze stability, pauses in speech. Every measure carries a quality score, and dim or blurry windows are thrown out.</p>
+          <ul class="sig-list">
+            <li><svg aria-hidden="true"><use href="#i-blink"/></svg><div><b>Blink rate and eye openness</b><span>Eye aspect ratio from 478 face landmarks</span></div><span class="v">15 fps</span></li>
+            <li><svg aria-hidden="true"><use href="#i-gaze"/></svg><div><b>Gaze stability and fixations</b><span>Iris position, head pose, dispersion</span></div><span class="v">10 s windows</span></li>
+            <li><svg aria-hidden="true"><use href="#i-voice"/></svg><div><b>Speech rate and pauses</b><span>Fillers in English and Roman Urdu, pitch, jitter</span></div><span class="v">per clip</span></li>
+          </ul>
+          <p class="note-line"><i></i>Computed inside the browser. Video never leaves the device, and markers sit beside the scores. They never raise a flag on their own.</p>
+        </div>
+        <div class="scope" data-reveal>
+          <div class="scope-top"><span class="live"><i></i>Eye aspect ratio · live window</span><span>Quality OK · face 98%</span></div>
+          <canvas id="scope" aria-label="Animated eye aspect ratio signal with blink events marked" role="img"></canvas>
+          <div class="scope-foot">
+            <div><span>Blinks / min</span><b id="bpm">17</b></div>
+            <div><span>Gaze dispersion</span><b>0.042</b></div>
+            <div><span>Long pauses</span><b>3</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- safety -->
+  <section class="sec safety" id="safety" aria-labelledby="safety-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>Safety</span>
+        <h2 class="h2" id="safety-title">Safety overrides <em>everything.</em></h2>
+        <p class="lede">Three detectors check every message and answer before any AI replies. When the signal is high, the AI goes silent and a person gets real help.</p>
+      </div>
+      <div class="grid">
+        <div class="tiers" data-reveal>
+          <div class="tier"><div class="row"><span class="sev s-watch"><b></b>Moderate</span><span class="chip">Safety pathway</span></div>
+            <h3>Pause, ask gently, keep help in view.</h3>
+            <p>The check-in pauses and the C-SSRS screener asks a few careful questions. Crisis numbers stay pinned for the rest of the session and the linked psychologist is alerted.</p></div>
+          <div class="tier"><div class="row"><span class="sev s-crisis"><b></b>High</span><span class="chip">Hard Stop</span></div>
+            <h3>No AI text. A calm screen and a phone number.</h3>
+            <p>Generation is aborted before it starts. The screen locks to crisis resources, and the psychologist is notified within a minute.</p></div>
+          <ul class="rules">
+            <li>Never diagnoses, prescribes or predicts</li>
+            <li>Never argues with or confirms a delusion</li>
+            <li>Understands English and Roman Urdu</li>
+          </ul>
+        </div>
+        <div class="crisis" data-reveal>
+          <span class="eyebrow" style="color:var(--g5)"><i></i>The crisis screen</span>
+          <h3>You don't have to handle this alone.</h3>
+          <p>Please reach out to someone right now. These services are free and confidential.</p>
+          <div class="res">
+            <a href="tel:03117786264"><b>Umang Pakistan</b><span>0311 7786264</span><small>24 hours</small></a>
+            <a href="tel:03041111741"><b>Rozan Helpline</b><span>0304 111 1741</span><small>Counselling</small></a>
+            <a href="tel:1122"><b>Rescue 1122</b><span>1122</span><small>Emergency</small></a>
+            <a href="tel:115"><b>Edhi</b><span>115</span><small>Ambulance</small></a>
+          </div>
+          <div class="acts"><span>I'm safe right now</span><span>Leave ZehenSync</span></div>
+          <p class="fine">No AI text on this screen. No red, no alarms. Numbers are checked by phone before every release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- audiences -->
+  <section class="sec audiences" id="audiences" aria-labelledby="aud-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>Who it's for</span>
+        <h2 class="h2" id="aud-title">Three worlds, <em>kept apart.</em></h2>
+        <p class="lede">Patient data never reaches the student side. The database enforces it, not a promise.</p>
+      </div>
+      <div class="aud-list">
+        <div class="aud" data-reveal>
+          <div><p class="who">Psychologists and clinics</p><h3>See why, not just what.</h3></div>
+          <div><p>A queue sorted by urgency, change from baseline highlighted, and flags you can trace to the exact answer. Exports replace hand-written session notes.</p>
+            <ul><li>Triage queue</li><li>Flag trace</li><li>PDF + JSON export</li><li>2FA + audit log</li></ul></div>
+          <span class="ic"><svg aria-hidden="true"><use href="#i-flag"/></svg></span>
+        </div>
+        <div class="aud" data-reveal>
+          <div><p class="who">Psychology students and researchers</p><h3>Study with a tutor that cites.</h3></div>
+          <div><p>Answers from the DSM-5-TR, PubMed and arXiv with the passage one click away, a tutor that adapts to your level, and a simulator for practising clinical interviews.</p>
+            <ul><li>Cited answers</li><li>Honest refusals</li><li>Patient simulator</li><li>Learner profile</li></ul></div>
+          <span class="ic"><svg aria-hidden="true"><use href="#i-citation"/></svg></span>
+        </div>
+        <div class="aud" data-reveal>
+          <div><p class="who">People seeking support</p><h3>Say how you feel without starting from nothing.</h3></div>
+          <div><p>Short check-ins in plain words, a counselor that listens, results you control and can share with your psychologist, and help one tap away.</p>
+            <ul><li>Guided check-ins</li><li>CBT-style counselor</li><li>Your history</li><li>Share and revoke</li></ul></div>
+          <span class="ic"><svg aria-hidden="true"><use href="#i-check-in"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- film -->
+  <section class="sec film" id="film" aria-labelledby="film-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>The film</span>
+        <h2 class="h2" id="film-title">Fifty-five seconds with <em>ZehenSync.</em></h2>
+      </div>
+      <div class="film-frame" data-reveal>
+        <video id="film-video" preload="metadata" playsinline poster="assets/film/poster.jpg">
+          <source src="assets/film/zehensync-film.mp4" type="video/mp4">
+        </video>
+        <button class="film-cover" id="filmCover" type="button" aria-label="Play the ZehenSync film">
+          <span class="pbtn"><svg width="28" height="28" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 1.5 L10.5 6 L3.2 10.5 Z" fill="#0E1233"/></svg></span>
+        </button>
+      </div>
+      <div class="film-meta"><span>0:55 · voiceover · music</span><span>Every name and number on screen is demo data</span></div>
+    </div>
+  </section>
+
+  <!-- pakistan -->
+  <section class="sec pk" aria-labelledby="pk-title">
+    <div class="wrap">
+      <div class="grid">
+        <div data-reveal>
+          <span class="eyebrow"><i></i>Built for Pakistan</span>
+          <h2 class="h2" id="pk-title" style="margin-top:22px">Made in Lahore, <em>for here.</em></h2>
+          <ul>
+            <li>English interface today. The counselor and crisis detection understand Roman Urdu.</li>
+            <li>Umang, Rozan, Rescue 1122 and Edhi built into every patient screen.</li>
+            <li>Social context first: money, housing, family and workload frame every result.</li>
+            <li>Validated Urdu PHQ-9 and GAD-7 planned after the first release.</li>
+          </ul>
+        </div>
+        <div data-reveal>
+          <p class="ur" lang="ur" dir="rtl">ذہن کی بات، ثبوت کے ساتھ</p>
+          <p class="ur-en">Matters of the mind, with evidence.</p>
+        </div>
+      </div>
+      <div class="halftone-band" data-reveal><canvas id="halftone" role="img" aria-label="Single-ink halftone of a Mughal arcade at dusk with a saffron sun"></canvas><span>Neel, the indigo of Sindh's ajrak</span></div>
+    </div>
+  </section>
+
+  <!-- research -->
+  <section class="sec research" id="research" aria-labelledby="research-title">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <span class="eyebrow"><i></i>Research</span>
+        <h2 class="sr-only" id="research-title">The question behind it</h2>
+      </div>
+      <p class="quote" data-reveal>Can eye- and speech-based behavioural markers, extracted with deep learning, <em>track</em> expert psychological assessment on an ordinary webcam?</p>
+      <div class="team" data-reveal>
+        <div><small>Advisor</small><b>Iqra Tariq</b><span>University of Central Punjab</span></div>
+        <div><small>AI and audio</small><b>Ch Hamza Younas</b><span>Speech, scoring, access control</span></div>
+        <div><small>Frontend and UX</small><b>Syed Raza Abbas Zaidi</b><span>Web app, language models</span></div>
+        <div><small>Vision and infrastructure</small><b>Sher Ali Saleem</b><span>Gaze, blink, safety systems</span></div>
+      </div>
+      <div class="timeline" data-reveal>
+        <div class="tl-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="tl-lbl"><span><b>Oct 2026</b> · Foundation</span><span>Screening · Safety · Scholar · Vision · Speech</span><span><b>Mar 2027</b> · Defence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pilot -->
+  <section class="pilot" id="pilot" aria-labelledby="pilot-title">
+    <div class="wrap">
+      <div class="pilot-card" data-reveal>
+        <div class="jaali-bg"><svg aria-hidden="true"><rect width="100%" height="100%" fill="url(#jaali-light)"/></svg></div>
+        <div>
+          <span class="eyebrow" style="color:#C9CEF3"><i></i>Pilot programme · 2027</span>
+          <h2 class="h2" id="pilot-title" style="margin-top:22px">Pilot ZehenSync at your clinic or department.</h2>
+          <p>We're looking for a counselling centre, clinic or psychology department to shape the psychologist workspace with us before the March 2027 defence.</p>
+        </div>
+        <div class="side">
+          <a class="btn-w" href="mailto:pilot@zehensync.app?subject=ZehenSync%20pilot">Request a pilot</a>
+          <span class="fine">pilot@zehensync.app · placeholder address</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <div style="display:grid;gap:14px"><img class="lk" src="assets/logo/zehensync-lockup-reversed.svg" alt="ZehenSync"><span style="font:400 italic 18px var(--serif);color:var(--muted)">Screening you can trace.</span></div>
+      <nav aria-label="Footer"><a href="#how">How it works</a><a href="#signals">Signals</a><a href="#safety">Safety</a><a href="#audiences">Who it's for</a><a href="#film">The film</a><a href="#pilot">Pilot</a></nav>
+    </div>
+    <div class="disc-line"><span><b>Screening support, not a diagnosis.</b> In an emergency call 1122.</span><span>ZehenSync AI · Final Year Project · UCP Lahore · 2026</span></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+{
+  "Artifact Links.txt": {
+    "mtime": 1790598686.5794523,
+    "seen": 1790624292.496743,
+    "ast_hash": "e16eea79814a86fcdf1dfcf959f005b8",
+    "semantic_hash": "e16eea79814a86fcdf1dfcf959f005b8"
+  },
+  "CLAUDE.md": {
+    "mtime": 1790592274.7887409,
+    "seen": 1790624292.4967484,
+    "ast_hash": "d743219b2091ce3f2f2760b80bf1a569",
+    "semantic_hash": "d743219b2091ce3f2f2760b80bf1a569"
+  },
+  "README.md": {
+    "mtime": 1790591251.356119,
+    "seen": 1790624292.496751,
+    "ast_hash": "44514ea7e5b5b9a04ad17d1b8cc902ab",
+    "semantic_hash": "44514ea7e5b5b9a04ad17d1b8cc902ab"
+  },
+  "docs/00-Home/Home.md": {
+    "mtime": 1790597366.622804,
+    "seen": 1790624292.4967525,
+    "ast_hash": "6799ca962a838cd9358b91cc86396c90",
+    "semantic_hash": "6799ca962a838cd9358b91cc86396c90"
+  },
+  "docs/00-Home/Rules.md": {
+    "mtime": 1790592068.6642723,
+    "seen": 1790624292.4967537,
+    "ast_hash": "9df7a7d48c34e0262138c6a7355c6ea0",
+    "semantic_hash": "9df7a7d48c34e0262138c6a7355c6ea0"
+  },
+  "docs/01-Product/PRD.md": {
+    "mtime": 1790591358.6929264,
+    "seen": 1790624292.4967546,
+    "ast_hash": "cf08e9261686d241b291c7c096ad548b",
+    "semantic_hash": "cf08e9261686d241b291c7c096ad548b"
+  },
+  "docs/02-Engineering/API.md": {
+    "mtime": 1790591725.9435372,
+    "seen": 1790624292.496756,
+    "ast_hash": "d77ecba603eb41542d497b9f9c0e861e",
+    "semantic_hash": "d77ecba603eb41542d497b9f9c0e861e"
+  },
+  "docs/02-Engineering/Backend-Schema.md": {
+    "mtime": 1790592305.2074523,
+    "seen": 1790624292.4967573,
+    "ast_hash": "9c2ef600e7cbf880ef8651232ccb02a1",
+    "semantic_hash": "9c2ef600e7cbf880ef8651232ccb02a1"
+  },
+  "docs/02-Engineering/TRD.md": {
+    "mtime": 1790591455.9679844,
+    "seen": 1790624292.4967582,
+    "ast_hash": "71dfa461a8dd9bcdff9b49ebf5ce20ae",
+    "semantic_hash": "71dfa461a8dd9bcdff9b49ebf5ce20ae"
+  },
+  "docs/03-Design/App-Flow.md": {
+    "mtime": 1790597505.2343292,
+    "seen": 1790624292.4967594,
+    "ast_hash": "d4fe41b84dea8f57a214a81a9a1fad07",
+    "semantic_hash": "d4fe41b84dea8f57a214a81a9a1fad07"
+  },
+  "docs/03-Design/Design-System.md": {
+    "mtime": 1790597610.6824572,
+    "seen": 1790624292.4967606,
+    "ast_hash": "fdc60b7c160bd4253b895a00104aff74",
+    "semantic_hash": "fdc60b7c160bd4253b895a00104aff74"
+  },
+  "docs/04-Brand/Brand-Kit.md": {
+    "mtime": 1790597554.520645,
+    "seen": 1790624292.4967618,
+    "ast_hash": "8e7af0d21d217a887276b08bcbd26437",
+    "semantic_hash": "8e7af0d21d217a887276b08bcbd26437"
+  },
+  "docs/04-Brand/brand-deck.html": {
+    "mtime": 1790597689.3179162,
+    "seen": 1790624292.496763,
+    "ast_hash": "854556b8cb026352830beb8cf26131ee",
+    "semantic_hash": "854556b8cb026352830beb8cf26131ee"
+  },
+  "docs/05-Planning/Phases.md": {
+    "mtime": 1790592112.85827,
+    "seen": 1790624292.4967642,
+    "ast_hash": "dcfdb3673b826c200fc863797a50728d",
+    "semantic_hash": "dcfdb3673b826c200fc863797a50728d"
+  },
+  "docs/05-Planning/RTM.md": {
+    "mtime": 1790592236.8897798,
+    "seen": 1790624292.4967651,
+    "ast_hash": "544428a38d756149cddf7c2c515e3254",
+    "semantic_hash": "544428a38d756149cddf7c2c515e3254"
+  },
+  "docs/05-Planning/Tracker.md": {
+    "mtime": 1790598038.556317,
+    "seen": 1790624292.496766,
+    "ast_hash": "d2b859d9e78ad5d697384aa5ee8d27b6",
+    "semantic_hash": "d2b859d9e78ad5d697384aa5ee8d27b6"
+  },
+  "docs/06-Memory/Decisions.md": {
+    "mtime": 1790598050.854233,
+    "seen": 1790624292.4967673,
+    "ast_hash": "dea16d8d2e59fcbf9faae47354c81170",
+    "semantic_hash": "dea16d8d2e59fcbf9faae47354c81170"
+  },
+  "docs/06-Memory/Glossary.md": {
+    "mtime": 1790592256.1216776,
+    "seen": 1790624292.4967682,
+    "ast_hash": "15a3f9f5a7c6292b4c837fd2dd6c3bc0",
+    "semantic_hash": "15a3f9f5a7c6292b4c837fd2dd6c3bc0"
+  },
+  "docs/06-Memory/Memory.md": {
+    "mtime": 1790597505.2354398,
+    "seen": 1790624292.4967692,
+    "ast_hash": "33fd8338973277906aaee1971ed779f8",
+    "semantic_hash": "33fd8338973277906aaee1971ed779f8"
+  },
+  "docs/07-Clinical/Instruments.md": {
+    "mtime": 1790591645.9844105,
+    "seen": 1790624292.4967704,
+    "ast_hash": "506de7a2806df591ef5c17b867900b07",
+    "semantic_hash": "506de7a2806df591ef5c17b867900b07"
+  },
+  "docs/07-Clinical/Safety-Protocol.md": {
+    "mtime": 1790591613.6206338,
+    "seen": 1790624292.4967716,
+    "ast_hash": "78d1f2fbb6655d2581c39ec9d802d596",
+    "semantic_hash": "78d1f2fbb6655d2581c39ec9d802d596"
+  },
+  "graphify-out/converted/ZehenSync_AI_ System Architecture and Product Flow Specification_427ef0ab.md": {
+    "mtime": 1790607167.877448,
+    "seen": 1790624292.4967725,
+    "ast_hash": "e19b42c47abfa56451450310273bc877",
+    "semantic_hash": "e19b42c47abfa56451450310273bc877"
+  },
+  "source-docs/Project Info.txt": {
+    "mtime": 1790588120.890836,
+    "seen": 1790624292.4967742,
+    "ast_hash": "390366eb46b3a04d85f5d3d51b4695e7",
+    "semantic_hash": "390366eb46b3a04d85f5d3d51b4695e7"
+  },
+  "source-docs/Questions Related Project.txt": {
+    "mtime": 1790588122.6961503,
+    "seen": 1790624292.4967754,
+    "ast_hash": "738cc4b1d28f5c93837a6dd1578ca621",
+    "semantic_hash": "738cc4b1d28f5c93837a6dd1578ca621"
+  },
+  "source-docs/DETAILED REPORT PDF(updated one).pdf": {
+    "mtime": 1790588130.318311,
+    "seen": 1790624292.496776,
+    "ast_hash": "feda341e9809529198b3c692de24c0f9",
+    "semantic_hash": "feda341e9809529198b3c692de24c0f9"
+  },
+  "source-docs/Zehen Sync Idea Proposal.pdf": {
+    "mtime": 1790589449.8458097,
+    "seen": 1790624292.4967775,
+    "ast_hash": "6eadf6085130b1f61135326b2360dc61",
+    "semantic_hash": "6eadf6085130b1f61135326b2360dc61"
+  },
+  "docs/04-Brand/icons/alert.svg": {
+    "mtime": 1790597335.33299,
+    "seen": 1790624292.4967785,
+    "ast_hash": "95d994df3a453a099207395104520398",
+    "semantic_hash": "95d994df3a453a099207395104520398"
+  },
+  "docs/04-Brand/icons/check-in.svg": {
+    "mtime": 1790596598.0092483,
+    "seen": 1790624292.4967797,
+    "ast_hash": "57cfc806ecbdd7bcddac1735ea4303d8",
+    "semantic_hash": "57cfc806ecbdd7bcddac1735ea4303d8"
+  },
+  "docs/04-Brand/icons/consent.svg": {
+    "mtime": 1790596598.0117497,
+    "seen": 1790624292.496781,
+    "ast_hash": "ba321980fee76e2184573877d59883d5",
+    "semantic_hash": "ba321980fee76e2184573877d59883d5"
+  },
+  "docs/04-Brand/icons/counselor.svg": {
+    "mtime": 1790596598.0102432,
+    "seen": 1790624292.496782,
+    "ast_hash": "4807b888fd4246e3571a9cad5c9a6586",
+    "semantic_hash": "4807b888fd4246e3571a9cad5c9a6586"
+  },
+  "docs/04-Brand/icons/history.svg": {
+    "mtime": 1790596598.011245,
+    "seen": 1790624292.496783,
+    "ast_hash": "36e3c86337c389de43110c771e196994",
+    "semantic_hash": "36e3c86337c389de43110c771e196994"
+  },
+  "docs/04-Brand/icons/share.svg": {
+    "mtime": 1790596598.0117497,
+    "seen": 1790624292.4967844,
+    "ast_hash": "cdcc3c67fdbd505c78523f6b49a83ea5",
+    "semantic_hash": "cdcc3c67fdbd505c78523f6b49a83ea5"
+  },
+  "docs/04-Brand/logo/studies/concept-b-split-lens.svg": {
+    "mtime": 1790596543.2292829,
+    "seen": 1790624292.4967854,
+    "ast_hash": "3e93e83449c91b8105d75bbbf8ddce3d",
+    "semantic_hash": "3e93e83449c91b8105d75bbbf8ddce3d"
+  },
+  "docs/04-Brand/logo/studies/concept-c-z-trace.svg": {
+    "mtime": 1790596543.230292,
+    "seen": 1790624292.4967864,
+    "ast_hash": "06a51efe23a199c71df45d2ae071e72a",
+    "semantic_hash": "06a51efe23a199c71df45d2ae071e72a"
+  },
+  "docs/04-Brand/logo/studies/concept-d-two-minds.svg": {
+    "mtime": 1790596543.230292,
+    "seen": 1790624292.4967875,
+    "ast_hash": "064132d36492abe810d93c5d23de18eb",
+    "semantic_hash": "064132d36492abe810d93c5d23de18eb"
+  },
+  "docs/04-Brand/logo/zehensync-lockup-reversed.svg": {
+    "mtime": 1790596543.2292829,
+    "seen": 1790624292.4967885,
+    "ast_hash": "168778a038695c60597e50958899ef76",
+    "semantic_hash": "168778a038695c60597e50958899ef76"
+  },
+  "docs/04-Brand/logo/zehensync-lockup.svg": {
+    "mtime": 1790596543.228277,
+    "seen": 1790624292.4967895,
+    "ast_hash": "e0e74ac3fc358b332406fda09007905c",
+    "semantic_hash": "e0e74ac3fc358b332406fda09007905c"
+  },
+  "docs/04-Brand/logo/zehensync-mark-ink.svg": {
+    "mtime": 1790596543.2267654,
+    "seen": 1790624292.496791,
+    "ast_hash": "102b0a0c7dc2540e4c0412121d90b632",
+    "semantic_hash": "102b0a0c7dc2540e4c0412121d90b632"
+  },
+  "docs/04-Brand/logo/zehensync-mark.svg": {
+    "mtime": 1790596543.2267654,
+    "seen": 1790624292.4967918,
+    "ast_hash": "ad50c25bc4a0254b6f0dde68c14de91a",
+    "semantic_hash": "ad50c25bc4a0254b6f0dde68c14de91a"
+  }
+}

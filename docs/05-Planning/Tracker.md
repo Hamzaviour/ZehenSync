@@ -22,6 +22,8 @@ Points use the Fibonacci scale (1, 2, 3, 5, 8). One point is roughly half a day 
 - [ ] T-0.07 GitHub repo, branch protection, PR template with RTM checkbox · — · 1
 - [x] T-0.08 Brand v2: Zaal mark, outlined wordmark, tokens, icons, brand deck with laptop mockups · — · 5
 - [ ] T-0.09 Export PNG set and favicon.ico from the v2 SVGs · — · 1
+- [x] T-0.10 Landing page (apps/landing) and 55 s voiced launch film (brag-output) · — · 8
+- [ ] T-0.11 Real pilot contact address or form for the landing page · — · 1
 
 ## P1 · Foundation
 

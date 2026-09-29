@@ -20,3 +20,11 @@ docs/.obsidian/cache
 .remember/
 .claude-flow/
 .DS_Store
+# brag film: master render and scratch stay local (web copy lives in apps/landing/assets/film)
+brag-output/brag.mp4
+brag-output/.tmp/
+brag-output/composition/snapshots/
+brag-output/composition/renders/
+brag-output/posters.png
+# agent skill copies installed locally
+.claude/skills/
