@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { AnswerOption, ResourcesStrip } from "@/components/patient/parts";
+import { AnswerGroup } from "@/components/patient/answer-group";
+import { ResourcesStrip } from "@/components/patient/parts";
 import { runnerStates } from "@/components/patient/runner-states";
 import { PrototypeStates } from "@/components/prototype-states";
 import { ButtonLink } from "@/components/ui/button";
@@ -19,10 +20,7 @@ export default function SafetyPathway() {
           <p className="text-sm text-muted">Question 1 of 2 · These words are fixed and are never reworded.</p>
           <h1 className="font-serif text-[28px] leading-snug font-normal">{cssrsQ1}</h1>
         </div>
-        <div className="flex flex-col gap-3">
-          <AnswerOption label="Yes" hint={1} />
-          <AnswerOption label="No" hint={2} selected />
-        </div>
+        <AnswerGroup options={["Yes", "No"]} initial={1} />
         <footer className="mt-4 flex items-center justify-between border-t border-line pt-4">
           <Link href="/check-in/demo" className="text-accent underline underline-offset-4">Back</Link>
           <ButtonLink href="/check-in/demo/result" size="lg">Next</ButtonLink>

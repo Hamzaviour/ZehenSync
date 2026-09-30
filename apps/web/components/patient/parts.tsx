@@ -3,9 +3,9 @@ import { cn } from "@/lib/cn";
 import { crisisResources } from "@/lib/crisis/resources";
 
 /** Check-in answer. Full width, 56 px, keyboard hint on the right (Design-System §3). */
-export function AnswerOption({ label, hint, selected }: { label: string; hint: number; selected?: boolean }) {
+export function AnswerOption({ label, hint, selected, onSelect }: { label: string; hint: number; selected?: boolean; onSelect?: () => void }) {
   return (
-    <button type="button" aria-pressed={selected}
+    <button type="button" role="radio" aria-checked={Boolean(selected)} onClick={onSelect}
       className={cn("relative flex h-14 w-full items-center justify-between rounded-md border px-5 text-left text-lg",
         selected ? "border-accent bg-accent-subtle before:absolute before:inset-y-0 before:left-0 before:w-[3px] before:bg-accent"
           : "border-line-strong bg-surface hover:bg-sunken")}>

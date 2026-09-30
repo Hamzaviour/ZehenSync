@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PatientColumn } from "@/components/shell/app-shell";
-import { ButtonLink } from "@/components/ui/button";
+import { Suggestion } from "@/components/islands/patient";
 import { PrototypeStates } from "@/components/prototype-states";
 
 export const metadata = { title: "Home" };
@@ -15,14 +15,11 @@ export default function Home() {
     <div className="flex min-h-[calc(100vh-56px)] flex-col">
       <PatientColumn>
         <h1 className="font-serif text-[32px]">Hi, Sana.</h1>
-        <section className="flex flex-col gap-5 rounded-lg border border-line-strong p-8">
+        <Suggestion href="/check-in/demo/setup" cta="Start check-in" dismissedNote="No problem. It stays under Check in whenever you want it."
+          className="flex flex-col gap-5 rounded-lg border border-line-strong p-8">
           <p className="text-sm text-muted">Suggested next step</p>
           <p className="font-serif text-2xl leading-snug">Sleep came up in your last two chats. A 7-question sleep check-in could help your psychologist.</p>
-          <div className="flex gap-3">
-            <ButtonLink href="/check-in/demo/setup" size="lg">Start check-in</ButtonLink>
-            <ButtonLink href="/home" variant="quiet" size="lg">Not now</ButtonLink>
-          </div>
-        </section>
+        </Suggestion>
         <section className="flex items-center justify-between gap-6 rounded-lg border border-line p-6">
           <div className="flex flex-col gap-1">
             <p className="text-sm text-muted">Last check-in · 20 Nov 2026</p>

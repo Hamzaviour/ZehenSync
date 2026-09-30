@@ -1,5 +1,5 @@
 import { PageHeader } from "@/components/shell/app-shell";
-import { Button } from "@/components/ui/button";
+import { DemoButton } from "@/components/ui/toast";
 import { Field, Select } from "@/components/ui/form";
 
 export const metadata = { title: "Profile" };
@@ -15,7 +15,7 @@ export default function ScholarProfile() {
         <h2 className="font-serif text-2xl">Topics you have asked about</h2>
         <ul className="list-disc space-y-1 pl-5 text-ink-2"><li>Depressive disorders</li><li>Risk assessment interviewing</li><li>Screening versus diagnosis</li></ul>
       </section>
-      <div><Button variant="secondary">Clear my profile</Button></div>
+      <div><DemoButton variant="secondary" toast="Profile cleared (demo)">Clear my profile</DemoButton></div>
     </div>
   );
 }

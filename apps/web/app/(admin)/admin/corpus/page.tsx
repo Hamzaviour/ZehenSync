@@ -1,6 +1,6 @@
 import { Table, Td, Th } from "@/components/clinician/table";
 import { PageHeader } from "@/components/shell/app-shell";
-import { Button } from "@/components/ui/button";
+import { DemoButton } from "@/components/ui/toast";
 import { Pill } from "@/components/ui/tags";
 
 export const metadata = { title: "Corpus" };
@@ -15,7 +15,7 @@ const rows = [
 export default function Corpus() {
   return (
     <div className="flex flex-col gap-6 px-6 py-8">
-      <PageHeader title="Corpus" sub="Sources the tutor can cite." actions={<Button>Add source</Button>} />
+      <PageHeader title="Corpus" sub="Sources the tutor can cite." actions={<DemoButton toast="Demo: the upload dialog opens here">Add source</DemoButton>} />
       <Table>
         <thead><tr><Th>Source</Th><Th className="text-right">Pages</Th><Th className="text-right">Chunks</Th><Th>Status</Th></tr></thead>
         <tbody>{rows.map((r) => <tr key={r[0]}><Td>{r[0]}</Td><Td className="text-right font-mono">{r[1]}</Td><Td className="text-right font-mono">{r[2]}</Td><Td><Pill tone={r[4] === "neutral" ? "neutral" : r[4]}>{r[3]}</Pill></Td></tr>)}</tbody>

@@ -1,6 +1,6 @@
 import { Table, Td, Th } from "@/components/clinician/table";
 import { PageHeader } from "@/components/shell/app-shell";
-import { Button } from "@/components/ui/button";
+import { DemoButton } from "@/components/ui/toast";
 
 export const metadata = { title: "Exports" };
 
@@ -18,7 +18,7 @@ export default function Exports() {
         <thead><tr><Th>When</Th><Th>Person</Th><Th>Type</Th><Th>Format</Th><Th>Contains</Th><Th /></tr></thead>
         <tbody>
           {rows.map((r) => (
-            <tr key={r[0]}><Td className="font-mono">{r[0]}</Td><Td className="font-mono">{r[1]}</Td><Td>{r[2]}</Td><Td>{r[3]}</Td><Td className="text-ink-2">{r[4]}</Td><Td className="text-right"><Button variant="quiet">Download</Button></Td></tr>
+            <tr key={r[0]}><Td className="font-mono">{r[0]}</Td><Td className="font-mono">{r[1]}</Td><Td>{r[2]}</Td><Td>{r[3]}</Td><Td className="text-ink-2">{r[4]}</Td><Td className="text-right"><DemoButton variant="quiet" toast="Demo: no file is made yet">Download</DemoButton></Td></tr>
           ))}
         </tbody>
       </Table>

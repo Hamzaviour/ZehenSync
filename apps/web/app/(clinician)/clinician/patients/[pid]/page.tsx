@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Table, Td, Th } from "@/components/clinician/table";
-import { Button } from "@/components/ui/button";
+import { NoteBox } from "@/components/islands/clinician";
+import { DemoButton } from "@/components/ui/toast";
 import { DeltaChip, Pill, SeverityTag } from "@/components/ui/tags";
 import { cn } from "@/lib/cn";
 import { queue } from "@/lib/demo/people";
@@ -26,7 +27,7 @@ export default async function Overview({ params, searchParams }: {
             <span className="flex gap-1.5"><Pill>Scores</Pill><Pill>Flags</Pill><Pill>Background</Pill></span>
           </p>
         </div>
-        <div className="flex items-center gap-3"><SeverityTag level={p.level} /><span className="text-sm text-ink-2">{p.flags} open flags</span><Button variant="secondary">Export</Button></div>
+        <div className="flex items-center gap-3"><SeverityTag level={p.level} /><span className="text-sm text-ink-2">{p.flags} open flags</span><DemoButton variant="secondary" toast="Export queued (demo: no file is made)">Export</DemoButton></div>
       </header>
       <nav aria-label="Sections" className="flex gap-1 border-b border-line">
         {tabs.map((t) => (
@@ -83,12 +84,7 @@ export default async function Overview({ params, searchParams }: {
           No camera or voice measurements. This person did not turn them on. Measurements only ever add context; they never raise a flag on their own.
         </div>
       )}
-      {tab === "Notes" && (
-        <div className="flex max-w-[720px] flex-col gap-3">
-          <textarea rows={4} aria-label="Note" placeholder="Add a note. Only you can read it." className="rounded-md border border-line-strong px-3 py-2 text-base" />
-          <div><Button>Save note</Button></div>
-        </div>
-      )}
+      {tab === "Notes" && <NoteBox />}
     </div>
   );
 }

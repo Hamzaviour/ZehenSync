@@ -1,5 +1,5 @@
 import { PageHeader, PatientColumn } from "@/components/shell/app-shell";
-import { Button } from "@/components/ui/button";
+import { DemoButton } from "@/components/ui/toast";
 import { Checkbox } from "@/components/ui/form";
 
 export const metadata = { title: "Settings" };
@@ -36,8 +36,8 @@ export default function Settings() {
       <section className="flex flex-col gap-4">
         <h2 className="font-serif text-2xl">Your data</h2>
         <div className="flex flex-col gap-4 rounded-lg border border-line p-6">
-          <div className="flex items-center justify-between gap-6"><p>Download everything we hold about you.</p><Button variant="secondary">Download my data</Button></div>
-          <div className="flex items-center justify-between gap-6 border-t border-line pt-4"><p>Delete your account and your data. This cannot be undone.</p><Button variant="secondary">Delete account</Button></div>
+          <div className="flex items-center justify-between gap-6"><p>Download everything we hold about you.</p><DemoButton variant="secondary" toast="Demo: your data export would be prepared and emailed">Download my data</DemoButton></div>
+          <div className="flex items-center justify-between gap-6 border-t border-line pt-4"><p>Delete your account and your data. This cannot be undone.</p><DemoButton variant="secondary" toast="Demo: nothing was deleted. The real flow asks you to confirm first.">Delete account</DemoButton></div>
         </div>
       </section>
     </PatientColumn>

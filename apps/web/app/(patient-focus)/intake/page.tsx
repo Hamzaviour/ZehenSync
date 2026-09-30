@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AnswerOption } from "@/components/patient/parts";
+import { AnswerGroup } from "@/components/patient/answer-group";
 import { ButtonLink } from "@/components/ui/button";
 import { PrototypeStates } from "@/components/prototype-states";
 import { intakeQuestion as q } from "@/lib/demo/instruments";
@@ -15,9 +15,7 @@ export default function Intake() {
           <p className="text-sm text-muted">{q.title}</p>
           <h1 className="font-serif text-[28px] leading-snug">{q.question}</h1>
         </div>
-        <div className="flex flex-col gap-3">
-          {q.options.map((o, i) => <AnswerOption key={o} label={o} hint={i + 1} selected={i === 1} />)}
-        </div>
+        <AnswerGroup options={q.options} initial={1} />
         <div className="flex items-center justify-between">
           <Link href="/intake/why" className="text-accent underline underline-offset-4">Back</Link>
           <ButtonLink href="/intake/done" size="lg">Next</ButtonLink>

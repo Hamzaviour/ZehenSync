@@ -1,14 +1,21 @@
-import Link from "next/link";
 import { CitationMark, ReferencePanel } from "@/components/citations";
-import { Composer } from "@/components/chat";
-import { Segmented } from "@/components/clinician/table";
-import { Alert } from "@/components/ui/alert";
+import { ChatThread } from "@/components/chat";
+import { Segmented } from "@/components/ui/segmented";
 import { DemoTag } from "@/components/ui/tags";
 import { refs } from "@/lib/demo/scholar";
 
 export const metadata = { title: "Tutor" };
 export const dynamicParams = false;
 export function generateStaticParams() { return [{ thread: "demo" }]; }
+
+const initial = [
+  { from: "user" as const, text: "What is the best treatment for it?" },
+  { from: "assistant" as const, text: "I can't find evidence for this in my sources. Try asking about the diagnostic criteria, or open Sources to see what I can cite." },
+];
+const replies = [
+  "Diagnostic criteria for a major depressive episode need five or more symptoms in the same two-week period [1].",
+  "I can't find evidence for this in my sources. Try rewording, or open Sources to see what I can cite.",
+];
 
 export default function Tutor() {
   return (
@@ -30,11 +37,7 @@ export default function Tutor() {
             <li>Tier 2 · recent papers · skipped, tier 1 was enough</li>
           </ul>
         </details>
-        <p className="ml-auto max-w-[80%] rounded-md bg-accent-subtle px-4 py-3">What is the best treatment for it?</p>
-        <Alert>
-          I can&apos;t find evidence for this in my sources. Try asking about the diagnostic criteria, or browse the <Link className="underline underline-offset-4" href="/scholar/sources">sources</Link>.
-        </Alert>
-        <Composer placeholder="Ask a question about psychology." />
+        <ChatThread initial={initial} replies={replies} placeholder="Ask a question about psychology." />
       </div>
       <ReferencePanel refs={refs} active={1} />
     </div>

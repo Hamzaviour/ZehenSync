@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TraceRow } from "@/components/clinician/trace-row";
-import { Button } from "@/components/ui/button";
+import { FlagActions, FlagProvider, FlagStatus } from "@/components/islands/clinician";
 import { SeverityTag } from "@/components/ui/tags";
 
 export const metadata = { title: "Flag trace" };
@@ -10,6 +10,7 @@ export function generateStaticParams() { return [{ fid: "F-1042" }]; }
 // The product's proof: every claim links to the stored value it came from (Design-System §4.5).
 export default function FlagTrace() {
   return (
+    <FlagProvider>
     <div className="mx-auto flex w-full max-w-[1040px] flex-col gap-6 px-6 py-8">
       <header className="flex items-start justify-between gap-6 border-b border-line pb-5">
         <div className="flex flex-col gap-2">
@@ -19,7 +20,7 @@ export default function FlagTrace() {
         </div>
         <div className="flex flex-col items-end gap-1 text-[13px]">
           <Link href="/clinician/patients/ZS-7F3K-2Q" className="font-mono text-base text-accent underline underline-offset-4">ZS-7F3K-2Q</Link>
-          <span className="rounded-sm bg-watch-fill px-2 py-0.5 text-watch">Open</span>
+          <FlagStatus />
         </div>
       </header>
 
@@ -51,11 +52,9 @@ export default function FlagTrace() {
         </div>
       </section>
 
-      <footer className="flex items-center justify-between border-t border-line pt-5">
-        <div className="flex gap-3"><Button>Acknowledge</Button><Button variant="secondary">Resolve</Button><Button variant="secondary">Add note</Button></div>
-        <Button variant="secondary">Export evidence</Button>
-      </footer>
+      <FlagActions />
       <p className="text-[13px] text-muted">This flag suggests a change worth looking at. It is not a diagnosis. Behavioural markers never raise a flag on their own.</p>
     </div>
+    </FlagProvider>
   );
 }

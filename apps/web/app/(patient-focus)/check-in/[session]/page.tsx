@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AnswerOption } from "@/components/patient/parts";
+import { AnswerGroup } from "@/components/patient/answer-group";
 import { runnerStates } from "@/components/patient/runner-states";
 import { PrototypeStates } from "@/components/prototype-states";
 import { ButtonLink } from "@/components/ui/button";
@@ -21,9 +21,7 @@ export default function Runner() {
             <p className="mt-2 rounded-md bg-sunken px-3 py-2 text-ink-2">&ldquo;{item.canonical}&rdquo;</p>
           </details>
         </div>
-        <div className="flex flex-col gap-3">
-          {answerOptions.map((o, i) => <AnswerOption key={o.value} label={o.label} hint={i + 1} selected={o.value === 2} />)}
-        </div>
+        <AnswerGroup options={answerOptions.map((o) => o.label)} initial={2} />
         <details className="text-sm">
           <summary className="w-fit cursor-pointer text-accent underline underline-offset-4">Add a note</summary>
           <textarea rows={3} aria-label="Note" className="mt-2 w-full rounded-md border border-line-strong px-3 py-2 text-base" />
