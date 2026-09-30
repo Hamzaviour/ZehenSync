@@ -1,6 +1,6 @@
 ---
 tags: [planning, tracker]
-updated: 2026-09-28
+updated: 2026-09-30
 ---
 
 # Tracker
@@ -36,12 +36,16 @@ Points use the Fibonacci scale (1, 2, 3, 5, 8). One point is roughly half a day 
 - [ ] T-1.07 TOTP 2FA for clinician and admin · F-PL-06 · 3
 - [ ] T-1.08 Consent centre API + UI · F-PL-04, F-PT-01 · 3
 - [ ] T-1.09 Audit log with hash chain and verifier · F-PL-05, US-25 · 3
-- [ ] T-1.10 packages/tokens from Brand-Kit; Tailwind 4 theme · — · 2
-- [ ] T-1.11 Restyled component base (Button, Input, Dialog, Table, Tabs, Toast) · — · 5
-- [ ] T-1.12 App shell per role with sidebar and top bar · — · 3
+- [x] T-1.10 packages/tokens from Brand-Kit; Tailwind 4 theme · — · 2
+- [/] T-1.11 Restyled component base (Button, Input, Dialog, Table, Tabs, Toast) · — · 5 (done: Button, Input, Select, Textarea, Checkbox, Alert, Table, segmented control, tags; open: Dialog, Toast)
+- [x] T-1.12 App shell per role with sidebar and top bar · — · 3 (static; route guards arrive with the API wiring)
 - [ ] T-1.13 OpenAPI to TS client and zod generation · — · 2
 - [ ] T-1.14 CI: ruff, mypy, pytest, eslint, tsc, vitest, build · — · 2
 - [ ] T-1.15 Under-18 block and referral page · PRD §4 · 1
+- [x] T-1.16 Static prototype: entry, role fork, signup, login, consents, pending and 2FA screens (ADR-018) · — · 3
+- [x] T-1.17 Static prototype: patient screens, intake, check-in runner states, result, chat, history, sharing, settings, crisis screen · — · 5
+- [x] T-1.18 Static prototype: psychologist screens, queue, patient overview, flag trace, exports, assistant, settings · — · 5
+- [x] T-1.19 Static prototype: scholar and admin screens · — · 3
 
 ## P2 · Screening engine
 
