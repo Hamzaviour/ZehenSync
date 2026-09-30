@@ -28,3 +28,12 @@ brag-output/composition/renders/
 brag-output/posters.png
 # agent skill copies installed locally
 .claude/skills/
+# web
+apps/web/test-results/
+apps/web/next-env.d.ts
+*.tsbuildinfo
+# web
+apps/web/test-results/
+apps/web/next-env.d.ts
+*.tsbuildinfo
+printf: warning: ignoring excess arguments, starting with ';'

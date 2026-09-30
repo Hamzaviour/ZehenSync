@@ -1,0 +1,90 @@
+/* ZehenSync design tokens v2 (Zaal identity). Source for packages/tokens. See Brand-Kit.md. */
+
+:root {
+  /* core */
+  --zs-paper: #FFFFFF;
+  --zs-mist: #F4F5F8;
+  --zs-line: #E3E5EC;
+  --zs-slate: #C5C9D6;
+  --zs-graphite-500: #62677D;
+  --zs-graphite-700: #454A60;
+  --zs-ink: #0E1233;
+  --zs-neel-50: #F1F2FB;
+  --zs-neel-100: #E3E6F7;
+  --zs-neel-300: #9AA6F2;
+  --zs-neel-600: #3441A8;
+  --zs-neel-700: #26318A;
+  --zs-saffron-400: #E3A33B; /* the nuqta: fills only, never text */
+  --zs-saffron-700: #8A5A0E;
+  --zs-night: #0B0E24;
+  --zs-night-raised: #151A3A;
+
+  /* severity: psychologist and admin areas only */
+  --zs-steady-text: #2E6B52; --zs-steady-fill: #E4F0EA;
+  --zs-watch-text: #8A5A0E;  --zs-watch-fill: #FBF0DC;
+  --zs-urgent-text: #A1461F; --zs-urgent-fill: #F8E6DC;
+  --zs-crisis-text: #9A1B35; --zs-crisis-fill: #F7E1E6;
+
+  /* semantic */
+  --bg: var(--zs-paper);
+  --surface: var(--zs-paper);
+  --sunken: var(--zs-mist);
+  --border: var(--zs-line);
+  --border-strong: var(--zs-slate);
+  --text: var(--zs-ink);
+  --text-secondary: var(--zs-graphite-700);
+  --text-muted: var(--zs-graphite-500);
+  --accent: var(--zs-neel-700);
+  --accent-hover: var(--zs-neel-600);
+  --accent-subtle: var(--zs-neel-50);
+  --accent-selected: var(--zs-neel-100);
+  --on-accent: #FFFFFF;
+  --nuqta: var(--zs-saffron-400);
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--zs-neel-700);
+
+  /* type */
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+  --text-13: 0.8125rem; --text-15: 0.9375rem; --text-18: 1.125rem; --text-24: 1.5rem;
+  --text-32: 2rem; --text-44: 2.75rem; --text-64: 4rem;
+
+  /* space (4 px grid) */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
+  --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
+
+  /* shape */
+  --radius-sm: 4px; --radius-md: 6px; --radius-lg: 10px;
+  --shadow-raised: 0 1px 2px rgb(14 18 51 / 0.06), 0 8px 24px rgb(14 18 51 / 0.08);
+
+  /* motion */
+  --ease-enter: cubic-bezier(0.2, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast: 120ms; --dur-panel: 200ms; --dur-page: 320ms; --dur-nuqta: 560ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0E24; --surface: #151A3A; --sunken: #080A1B;
+    --border: #262C57; --border-strong: #353D72;
+    --text: #EEF0F7; --text-secondary: #C7CBDD; --text-muted: #A7ACC4;
+    --accent: #9AA6F2; --accent-hover: #B3BCF6; --accent-subtle: #1A2050; --accent-selected: #232B66;
+    --on-accent: #0B0E24;
+    --zs-steady-text: #7CC3A0; --zs-watch-text: #F0BD62; --zs-urgent-text: #EE9A74; --zs-crisis-text: #F28DA2;
+    --zs-steady-fill: #14302A; --zs-watch-fill: #33280F; --zs-urgent-fill: #3A2014; --zs-crisis-fill: #3A1424;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0E24; --surface: #151A3A; --sunken: #080A1B;
+  --border: #262C57; --border-strong: #353D72;
+  --text: #EEF0F7; --text-secondary: #C7CBDD; --text-muted: #A7ACC4;
+  --accent: #9AA6F2; --accent-hover: #B3BCF6; --accent-subtle: #1A2050; --accent-selected: #232B66;
+  --on-accent: #0B0E24;
+  --zs-steady-text: #7CC3A0; --zs-watch-text: #F0BD62; --zs-urgent-text: #EE9A74; --zs-crisis-text: #F28DA2;
+  --zs-steady-fill: #14302A; --zs-watch-fill: #33280F; --zs-urgent-fill: #3A2014; --zs-crisis-fill: #3A1424;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-panel: 120ms; --dur-page: 120ms; --dur-nuqta: 120ms; }
+}
