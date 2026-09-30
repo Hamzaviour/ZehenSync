@@ -13,7 +13,7 @@ const groups: { title: string; note: string; screens: [string, string][] }[] = [
   { title: "Support (patient)", note: "Screens for the person seeking support", screens: [
     ["/home", "Home"], ["/home/new", "Home, first visit"], ["/intake/why", "Intake, why we ask"], ["/intake", "Intake question"], ["/intake/done", "Intake done"],
     ["/check-in", "Check-in picker"], ["/check-in/demo/setup", "Check-in setup"], ["/check-in/demo", "Check-in question"], ["/check-in/demo/safety", "Safety pathway"],
-    ["/check-in/demo/result", "Result"], ["/talk", "Talk"], ["/talk/demo", "Counselor chat"], ["/history", "History"], ["/sharing", "Sharing"], ["/settings", "Settings"], ["/help", "Crisis screen"],
+    ["/check-in/demo/voice/camera", "Spoken: camera guide"], ["/check-in/demo/voice/sound", "Spoken: sound check"], ["/check-in/demo/voice/interview", "Spoken: questions"], ["/check-in/demo/voice/done", "Spoken: done"], ["/check-in/demo/result", "Result"], ["/talk", "Talk"], ["/talk/demo", "Counselor chat"], ["/history", "History"], ["/sharing", "Sharing"], ["/settings", "Settings"], ["/help", "Crisis screen"],
   ] },
   { title: "Psychologist", note: "Dense screens for clinicians", screens: [
     ["/clinician/queue", "Queue"], ["/clinician/queue/empty", "Queue, empty"], ["/clinician/patients/ZS-7F3K-2Q", "Patient overview"],

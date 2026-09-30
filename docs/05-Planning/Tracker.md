@@ -46,6 +46,8 @@ Points use the Fibonacci scale (1, 2, 3, 5, 8). One point is roughly half a day 
 - [x] T-1.17 Static prototype: patient screens, intake, check-in runner states, result, chat, history, sharing, settings, crisis screen · — · 5
 - [x] T-1.18 Static prototype: psychologist screens, queue, patient overview, flag trace, exports, assistant, settings · — · 5
 - [x] T-1.19 Static prototype: scholar and admin screens · — · 3
+- [x] T-1.20 Prototype interactivity with local mock state (chat replies, filters, flag workflow, toasts) · — · 3
+- [x] T-1.21 Spoken check-in prototype: camera framing guide, quiet-room check, open voice questions, done screen · F-PT-08, F-BE-01 · 3
 
 ## P2 · Screening engine
 

@@ -25,6 +25,10 @@ export default function CheckInPicker() {
           <ButtonLink href="/check-in/demo/setup" size="lg">Start</ButtonLink>
         </div>
       </section>
+      <section className="flex items-center justify-between gap-6 rounded-lg border border-line p-6">
+        <div className="flex flex-col gap-1"><h2 className="font-serif text-2xl">Spoken check-in</h2><p className="text-base text-ink-2">Answer open questions out loud, in your own words. About 6 minutes. Uses camera and microphone.</p></div>
+        <ButtonLink href="/check-in/demo/voice/camera" variant="secondary" size="lg">Set up</ButtonLink>
+      </section>
       <section className="flex flex-col gap-3">
         <h2 className="text-sm font-medium text-muted">All check-ins</h2>
         <ul className="flex flex-col divide-y divide-line rounded-lg border border-line">
