@@ -4,6 +4,10 @@ A multimodal screening-support platform for mental health. It serves patients, p
 
 ZehenSync screens and never diagnoses. A licensed psychologist makes every clinical decision.
 
+**[🌐 Visit the live landing page](https://zehensync-landing.vercel.app)**
+
+<a href="https://zehensync-landing.vercel.app"><img src="https://github.com/user-attachments/assets/c030448f-97a5-434b-8939-2956a64e4633" alt="ZehenSync landing page: Screening you can trace" width="760"></a>
+
 Final Year Project, BS Artificial Intelligence, University of Central Punjab, Lahore.
 Team: Ch Hamza Younas, Syed Raza Abbas Zaidi, Sher Ali Saleem. Advisor: Iqra Tariq.
 
