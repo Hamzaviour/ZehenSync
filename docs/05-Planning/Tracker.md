@@ -48,6 +48,7 @@ Points use the Fibonacci scale (1, 2, 3, 5, 8). One point is roughly half a day 
 - [x] T-1.19 Static prototype: scholar and admin screens · — · 3
 - [x] T-1.20 Prototype interactivity with local mock state (chat replies, filters, flag workflow, toasts) · — · 3
 - [x] T-1.21 Spoken check-in prototype: camera framing guide, quiet-room check, open voice questions, done screen · F-PT-08, F-BE-01 · 3
+- [x] T-1.22 Landing page: coming-soon badge, waitlist and early-user form sent to team inbox via FormSubmit, temporary contact email · — · 1
 
 ## P2 · Screening engine
 
