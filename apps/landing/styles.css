@@ -372,6 +372,32 @@ sup.cite { font: 500 .62em var(--mono); color: var(--neel); vertical-align: supe
 .pilot-card p { color: #DDE0F7; font-size: 18px; max-width: 30em; margin-top: 22px; }
 .pilot-card .side { display: grid; gap: 14px; justify-items: start; }
 .pilot-card .fine { font: 12px var(--mono); color: #C9CEF3; }
+.pilot-card { align-items: start; }
+.pilot-card p.contact { font-size: 15px; color: #C9CEF3; }
+.pilot-card p.contact a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.eyebrow .soon { margin-left: 4px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--saf); color: var(--saf); letter-spacing: .12em; font-size: 11px; }
+
+/* waitlist form */
+.wl { display: grid; gap: 14px; width: 100%; }
+.wl-type { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 4px; border-radius: 999px; background: rgb(255 255 255 / .1); }
+.wl-type label { position: relative; cursor: pointer; }
+.wl-type input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.wl-type span { display: block; text-align: center; padding: 9px 10px; border-radius: 999px; font: 500 13.5px var(--sans); color: #DDE0F7; transition: background .2s var(--ease), color .2s var(--ease); }
+.wl-type input:checked + span { background: var(--paper); color: var(--ink); }
+.wl-type input:focus-visible + span { outline: 2px solid var(--neel-3); outline-offset: 2px; }
+.wl-f { display: grid; gap: 6px; }
+.wl-f > span { font: 500 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: #C9CEF3; }
+.wl-f small { text-transform: none; letter-spacing: 0; opacity: .75; }
+.wl-f input, .wl-f select, .wl-f textarea {
+  width: 100%; font: 400 15px var(--sans); color: var(--ink); background: var(--paper);
+  border: 1px solid transparent; border-radius: 12px; padding: 12px 14px; resize: vertical;
+}
+.wl-f input:focus, .wl-f select:focus, .wl-f textarea:focus { outline: 2px solid var(--neel-3); outline-offset: 2px; }
+.wl-f [aria-invalid="true"] { border-color: var(--saf); }
+.wl .btn-w { justify-content: center; border: 0; cursor: pointer; }
+.wl .btn-w[disabled] { opacity: .6; cursor: progress; transform: none; }
+.wl-status { margin: 0 !important; font-size: 15px !important; color: #fff !important; min-height: 1.2em; }
+.wl-status.err { color: var(--saf) !important; }
 
 /* footer */
 .foot { padding-block: 72px 48px; border-top: 1px solid var(--rule-soft); margin-top: clamp(96px, 12vw, 160px); }

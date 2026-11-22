@@ -43,7 +43,7 @@
       <li><a href="#audiences">Who it's for</a></li>
       <li><a href="#research">Research</a></li>
     </ul>
-    <div class="r"><a class="btn-g" href="#film">Watch the film</a><a class="btn-w sm" href="#pilot">Request a pilot</a></div>
+    <div class="r"><a class="btn-g" href="#film">Watch the film</a><a class="btn-w sm" href="#pilot">Join the waitlist</a></div>
   </div>
 </header>
 
@@ -54,14 +54,14 @@
     <div class="jaali-bg" data-parallax="0.25"><svg aria-hidden="true"><rect width="100%" height="100%" fill="url(#jaali)"/></svg></div>
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow" data-hero="eyebrow"><i></i>Mental-health screening support · Lahore</span>
+        <span class="eyebrow" data-hero="eyebrow"><i></i>Mental-health screening support · Lahore <span class="soon">Coming soon</span></span>
         <h1 id="hero-title">
           <span class="ln"><span>Screening</span></span>
           <span class="ln"><span>you can <span style="white-space:nowrap"><em>trace</em><span class="nq-stop" id="heroNq"></span></span></span></span>
         </h1>
         <p class="lede" data-hero="fade">ZehenSync guides a person through validated check-ins one question at a time, reads blink, gaze and pauses from an ordinary webcam, and shows the psychologist the exact answer behind every flag.</p>
         <div class="ctas" data-hero="fade">
-          <a class="btn-w" href="#pilot">Request a pilot</a>
+          <a class="btn-w" href="#pilot">Join the waitlist</a>
           <a class="btn-g" href="#film"><span class="pl"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5 L10.5 6 L3 10.5 Z" fill="#fff"/></svg></span>Watch the film <small>0:55</small></a>
         </div>
         <ul class="facts" data-hero="fade">
@@ -459,13 +459,39 @@
       <div class="pilot-card" data-reveal>
         <div class="jaali-bg"><svg aria-hidden="true"><rect width="100%" height="100%" fill="url(#jaali-light)"/></svg></div>
         <div>
-          <span class="eyebrow" style="color:#C9CEF3"><i></i>Pilot programme · 2027</span>
-          <h2 class="h2" id="pilot-title" style="margin-top:22px">Pilot ZehenSync at your clinic or department.</h2>
-          <p>We're looking for a counselling centre, clinic or psychology department to shape the psychologist workspace with us before the March 2027 defence.</p>
+          <span class="eyebrow" style="color:#C9CEF3"><i></i>Coming soon · 2027</span>
+          <h2 class="h2" id="pilot-title" style="margin-top:22px">Be first in line when ZehenSync opens.</h2>
+          <p>ZehenSync is still in development. Join the waitlist to hear when it launches, or sign up as an early user to test it with us before the March 2027 defence. Clinics, counselling centres and psychology departments are welcome to pilot it.</p>
+          <p class="contact">Questions? <a href="mailto:hamzavelous@gmail.com?subject=ZehenSync">hamzavelous@gmail.com</a></p>
         </div>
         <div class="side">
-          <a class="btn-w" href="mailto:pilot@zehensync.app?subject=ZehenSync%20pilot">Request a pilot</a>
-          <span class="fine">pilot@zehensync.app · placeholder address</span>
+          <form class="wl" id="waitlist" action="https://formsubmit.co/hamzavelous@gmail.com" method="POST" novalidate>
+            <fieldset class="wl-type">
+              <legend class="sr-only">I want to</legend>
+              <label><input type="radio" name="interest" value="Waitlist" checked><span>Join the waitlist</span></label>
+              <label><input type="radio" name="interest" value="Early user"><span>Be an early user</span></label>
+            </fieldset>
+            <label class="wl-f"><span>Name</span><input type="text" name="name" autocomplete="name" required maxlength="120"></label>
+            <label class="wl-f"><span>Email</span><input type="email" name="email" autocomplete="email" required maxlength="200"></label>
+            <label class="wl-f"><span>I am a</span>
+              <select name="role" required>
+                <option value="" selected disabled>Choose one</option>
+                <option>Psychologist or counsellor</option>
+                <option>Clinic or university department</option>
+                <option>Student or researcher</option>
+                <option>Someone interested in using it</option>
+                <option>Other</option>
+              </select></label>
+            <label class="wl-f"><span>Organisation <small>optional</small></span><input type="text" name="organisation" autocomplete="organization" maxlength="160"></label>
+            <label class="wl-f"><span>Anything else? <small>optional</small></span><textarea name="message" rows="3" maxlength="1000"></textarea></label>
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="ZehenSync waitlist sign-up">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <button class="btn-w" type="submit">Sign me up</button>
+            <span class="fine">Please don't share health details here. We only use this to contact you about ZehenSync.</span>
+            <p class="wl-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -476,7 +502,7 @@
   <div class="wrap">
     <div class="top">
       <div style="display:grid;gap:14px"><img class="lk" src="assets/logo/zehensync-lockup-reversed.svg" alt="ZehenSync"><span style="font:400 italic 18px var(--serif);color:var(--muted)">Screening you can trace.</span></div>
-      <nav aria-label="Footer"><a href="#how">How it works</a><a href="#signals">Signals</a><a href="#safety">Safety</a><a href="#audiences">Who it's for</a><a href="#film">The film</a><a href="#pilot">Pilot</a></nav>
+      <nav aria-label="Footer"><a href="#how">How it works</a><a href="#signals">Signals</a><a href="#safety">Safety</a><a href="#audiences">Who it's for</a><a href="#film">The film</a><a href="#pilot">Waitlist</a></nav>
     </div>
     <div class="disc-line"><span><b>Screening support, not a diagnosis.</b> In an emergency call 1122.</span><span>ZehenSync AI · Final Year Project · UCP Lahore · 2026</span></div>
   </div>
@@ -486,5 +512,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="main.js"></script>
+<script src="waitlist.js"></script>
 </body>
 </html>

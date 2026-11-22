@@ -10,7 +10,7 @@ Related: [[Brand-Kit]] · [[Design-System]] · [[PRD]] · code in `apps/landing/
 
 ## Purpose
 
-Win pilot partners (clinics, university counselling centres, psychology departments) and support the FYP defence. Primary CTA **Request a pilot**, secondary **Watch the film**.
+Win pilot partners (clinics, university counselling centres, psychology departments) and support the FYP defence. Primary CTA **Join the waitlist**, secondary **Watch the film**. The product is marked **Coming soon**.
 
 ## Build
 
@@ -38,5 +38,5 @@ Made with `/brag --voice` from the landing page source. About 60 s, music plus K
 
 ## Open items
 
-- Pilot request destination: placeholder `mailto:pilot@zehensync.app` until the team picks a real address or form service. The domain is not registered.
+- Waitlist and early-user sign-ups: form in the `#pilot` section posts through FormSubmit (`formsubmit.co/ajax/hamzavelous@gmail.com`) to the team inbox. The first submission sends FormSubmit's one-time activation email to that inbox; sign-ups are delivered only after it is confirmed. Contact address `hamzavelous@gmail.com` is temporary until a project domain exists. The form asks people not to share health details.
 - Crisis numbers on the page follow [[Safety-Protocol]] and need the same pre-release phone verification.
