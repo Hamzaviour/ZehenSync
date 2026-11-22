@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "@zehensync/tokens/tokens.css";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-selected: var(--accent-selected);
+  --color-on-accent: var(--on-accent);
+  --color-nuqta: var(--nuqta);
+  --color-steady: var(--zs-steady-text);
+  --color-steady-fill: var(--zs-steady-fill);
+  --color-watch: var(--zs-watch-text);
+  --color-watch-fill: var(--zs-watch-fill);
+  --color-urgent: var(--zs-urgent-text);
+  --color-urgent-fill: var(--zs-urgent-fill);
+  --color-crisis: var(--zs-crisis-text);
+  --color-crisis-fill: var(--zs-crisis-fill);
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-schibsted), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+html { background: var(--bg); color: var(--text); }
+body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; min-width: 1024px; font-size: 15px; line-height: 1.45; }
+h1, h2, h3 { text-wrap: balance; }
+:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+.tnum { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 1ms !important; animation-duration: 1ms !important; } }

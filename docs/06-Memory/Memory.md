@@ -1,6 +1,6 @@
 ---
 tags: [memory, status]
-updated: 2026-09-28
+updated: 2026-09-30
 ---
 
 # Memory
@@ -9,9 +9,12 @@ The current state of the project on one page. Update it when a decision, blocker
 
 ## Now
 
-- **Phase:** P0 Docs, brand, repo (28 Sep to 4 Oct 2026).
-- **Done:** vault written, brand kit and logo drafted, source documents reconciled.
-- **Next:** team and advisor review (T-0.05), monorepo skeleton (T-0.06), GitHub setup (T-0.07).
+- **Phase:** P1 Foundation, on branch `phase/p1-foundation`.
+- **Done:** vault, brand v2, landing page and film. P1 plans written (`docs/05-Planning/plans/`).
+- **Done (30 Sep):** static, non-operational frontend of every App Flow screen in `apps/web` with synthetic demo data ([[Decisions#ADR-018]]): 50 routes, T-1.10, T-1.12, T-1.16 to T-1.19. Run `pnpm web`, start at `/`.
+- **Now:** review the screens with the team (T-0.05). Dialog and Toast components (T-1.11) are open.
+- **Crisis numbers:** in `apps/web/lib/crisis/resources.ts`, matched by a test to Safety-Protocol. Still need a call-and-verify pass (T-3.11).
+- **Deferred:** P1-A backend plan and the API wiring in P1-B. Picked up after the screens are reviewed.
 - **Blockers:** none.
 - **Live tracker:** https://claude.ai/artifact/HQtuNNJS27Q1DwxLvzSdVs (status in its db collection `status`, keyed by task ID). Keep in sync with [[Tracker]].
 

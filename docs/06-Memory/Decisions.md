@@ -97,3 +97,10 @@ Architecture decision records. Newest at the bottom. Never delete a record; supe
 **Context:** the team rejected v1: the Sync Z mark read as a menu icon, beige paper felt dull, and the kit looked like a document.
 **Decision:** a Kufic ذ (first letter of ذہن) with a saffron diamond nuqta, symmetric about its diagonal with 24° nib cuts. Neel `#26318A` brand colour, saffron `#E3A33B` only as the nuqta, clinical white and cool greys. Newsreader (outlined wordmark), Schibsted Grotesk, Geist Mono. Light product, dark brand moments. Concepts B, C and D are kept in `docs/04-Brand/logo/studies/`.
 **Consequences:** new tokens, icons and logo files; Design System copy updated; the tracker page restyled. See [[Brand-Kit]].
+
+## ADR-018
+**Static frontend first, backend deferred**
+**Date:** 2026-09-30 · **Status:** accepted (ADR-016 and ADR-017 are reserved by the P1-A and P1-B plans)
+**Context:** the team wants to see and review every screen before building the API. The P1-A backend plan and the API-wiring half of the P1-B plan are written but not started.
+**Decision:** build `apps/web` in Next.js with every App Flow screen for all four roles as a static, non-operational prototype. Pages render one designed state each from synthetic demo data in `apps/web/lib/demo/`. No API calls, no form logic, no client state. P1-A is deferred, not dropped.
+**Consequences:** screens, tokens, primitives and shells carry over when the API arrives; the P1-B tasks for the API client, auth store and route guards (T-1.13 and the wiring parts of T-1.05 to T-1.08) still apply later. Every screen shows a "Demo data" label so no number reads as real.
